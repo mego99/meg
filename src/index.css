@@ -1,0 +1,50 @@
+@font-face{
+  font-family: 'Atlas Grotesk';
+  src: url('assets/Atlas Grotesk Web-Regular.woff');
+  font-weight: normal;
+}
+@font-face{
+  font-family: 'Atlas Grotesk';
+  src: url('assets/Atlas Grotesk Web-Bold.woff');
+  font-weight: bold;
+}
+body {
+  padding: 0;
+  margin:0 5vw 0 5vw;
+  font-family: 'Atlas Grotesk', sans-serif;
+  background-color:#3e3bd9;
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-li {
+  display: inline-block;
+  padding: 0 2vw 0 2vw;
+  font-size: 0.8em;
+}
+header.app-header {
+  width: 100vw;
+  max-width: 100%;
+  text-align: center;
+  margin: 5vh 0 5vh 0;
+  left:0;
+  height:10vh;
+}
+ul.nav-ul {
+  padding: 0;
+}
+header.nav a {
+  color:#6e87df;
+  &:hover{
+    color:#ffffff;
+  }
+}
+header.nav a.active {
+  color:red;
+}
+.active {
+  color: red;
+}
