@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Route,NavLink,HashRouter} from "react-router-dom";
 
 class Work extends React.Component {
   constructor(props) {
@@ -9,8 +10,8 @@ class Work extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/posts')
-      .then(response => response.json())
+    fetch('/newposts')
+      .then(response => response.json()) //resolve promise by linking to next .then
       .then(parsedData => {
         console.log(parsedData);
         this.setState({posts: parsedData});
@@ -18,13 +19,31 @@ class Work extends React.Component {
 
   }
 
+  adjustDate(date) {
+    let monthNames = [
+      "January", "February", "March",
+      "April", "May", "June", "July",
+      "August", "September", "October",
+      "November", "December"
+    ];
+    let t = date.split(/[- :TZ]/);
+    let d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
+    console.log(d);
+    let dateOptions = { month:'long', day:'numeric', year:'numeric', timeZone:'Asia/Tokyo' };
+    return d.toLocaleDateString('en-US', dateOptions);
+  }
+
   getPosts() {
     console.log(this.state.posts);
     let posts = this.state.posts;
+    let date = this.adjustDate;
     let newarr =  Object.keys(posts).map(function(x,i) {
           return <div key={i}>
-                  <p>{posts[x].title}</p>
-                 </div>;
+                  <h3>{date(posts[x].create_time)}</h3>
+                  <a href="" className="post-title">{posts[x].title}</a>
+                  <p className="post-content">{posts[x].content}</p>
+
+                </div>;
       })
     return newarr;
   }
