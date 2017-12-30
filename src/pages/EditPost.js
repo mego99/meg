@@ -12,7 +12,7 @@ class EditPost extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/getposts/6`)
+    fetch(`/api/getposts/${parseInt((this.props.location.pathname).split("/")[2]) }`)
       .then(
         response => response.json()
       )
@@ -20,8 +20,6 @@ class EditPost extends Component {
         console.log(parsedData);
         this.setState({posts: parsedData});
         this.getId();
-
-
       })
   }
 
@@ -43,10 +41,28 @@ class EditPost extends Component {
 
   submit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.target);
+    const form = event.target;
+    const data = new FormData(form);
+
+    const inputParsers = {
+      number(input) {
+        return parseInt(input);
+      }
+    };
+
+    for (let name of data.keys()) {
+      const input = form.elements[name];
+      const parserName = input.dataset.parse;
+
+      if (parserName) {
+        const parser = inputParsers[parserName];
+        const parsedValue = parser(data.get(name));
+        data.set(name, parsedValue);
+      }
+    }
     fetch(`/api/updatepost/${this.getId()}`, {
-      method: 'PUT',
-      body: data,
+      method: 'post',
+      body: data
     });
   }
 
@@ -54,6 +70,11 @@ class EditPost extends Component {
   render() {
     const divstyles = {
         padding: '1vw'
+    };
+    const smallboxstyle = {
+      padding: '10px',
+      margin:'0.5vw',
+      width: '10vw'
     };
     const boxstyle = {
       padding: '10px',
@@ -69,7 +90,7 @@ class EditPost extends Component {
 
     return (
         <div>
-        <form  onSubmit={this.submit}>
+        <form method='post' onSubmit={this.submit}>
           <div style={divstyles} className="input">
             <label htmlFor="title">Enter title</label>
             <br/>
@@ -87,7 +108,11 @@ class EditPost extends Component {
             <br/>
             <textarea style={bigboxstyle} id="content" name="content" type="text" required />
           </div>
-
+          <div style={divstyles} className="input">
+            <label htmlFor="id">Enter id</label>
+            <br/>
+            <input style={smallboxstyle} id="id" name="id" type="text" data-parse="number" required/>
+          </div>
           <button>Send data!</button>
         </form>
         </div>

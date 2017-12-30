@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import AllPosts from './pages/AllPosts';
+import EditPost from './pages/EditPost';
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
               <Route exact path="/about" component={About}/>
               <Route exact path="/work" component={Work}/>
               <Route path="/allposts" component={AllPosts}/>
+              <Route path="/editpost" component={EditPost}/>
             </Switch>
           </div>
         </div>
