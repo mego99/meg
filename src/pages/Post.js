@@ -17,6 +17,9 @@ class Post extends Component {
       .then(parsedData => {
         console.log(parsedData);
         this.setState({posts: parsedData});
+        this.setState({post_title:parsedData[0]['title']});
+        document.title = 'Meguna | ' + this.state.post_title;
+
       })
 
   }
