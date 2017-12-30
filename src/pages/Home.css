@@ -1,8 +1,8 @@
 .home-background {
   background-image:url('../assets/crystals-bottom.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: left bottom;
   bottom:0;
   height:100vh;
   max-height:100%;

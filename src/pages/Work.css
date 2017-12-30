@@ -1,5 +1,5 @@
 div.post-container {
-  padding: 1vh 0 1vh 0;
+  padding: 3vh 0 3vh 0;
 }
 .post-title {
   text-transform: uppercase;
@@ -15,4 +15,5 @@ span.post-date {
   padding: 0 1em 0 1em;
   color: #7480c1;
   white-space: nowrap;
+  text-transform: uppercase;
 }

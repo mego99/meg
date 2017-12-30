@@ -17,6 +17,7 @@ body {
 }
 div.content {
   padding: 1vmax;
+  margin: 0 7vw 0 7vw;
 }
 a {
   text-decoration: none;
