@@ -13,7 +13,7 @@ class Art extends React.Component {
 
   componentDidMount() {
     document.title = 'Meguna | Art';
-    fetch('/api/getnewposts')
+    fetch('/api/getartposts')
       .then(function(response, error) {
         if (error) throw error;
         return response.json();

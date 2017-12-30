@@ -13,7 +13,7 @@ class Design extends React.Component {
 
   componentDidMount() {
     document.title = 'Meguna | Design';
-    fetch('/api/getnewposts')
+    fetch('/api/getdesignposts')
       .then(function(response, error) {
         if (error) throw error;
         return response.json();

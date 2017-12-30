@@ -13,7 +13,7 @@ class Code extends React.Component {
 
   componentDidMount() {
     document.title = 'Meguna | Code';
-    fetch('/api/getnewposts')
+    fetch('/api/getcodeposts')
       .then(function(response, error) {
         if (error) throw error;
         return response.json();
