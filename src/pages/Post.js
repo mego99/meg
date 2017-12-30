@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import {Route,NavLink,HashRouter} from "react-router-dom";
+import {Switch,Route} from "react-router-dom";
 
-class Post extends React.Component {
+class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,8 +10,10 @@ class Post extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/posts/:id')
-      .then(response => response.json())
+    fetch(`/posts/${this.props.match.params.id}`)
+      .then(
+        response => response.json()
+      )
       .then(parsedData => {
         console.log(parsedData);
         this.setState({posts: parsedData});
@@ -24,7 +26,8 @@ class Post extends React.Component {
     let posts = this.state.posts;
     let newarr =  Object.keys(posts).map(function(x,i) {
           return <div key={i}>
-                  <a href="">{posts[x].title}</a>
+                    <h1>{posts[x].title}</h1>
+                    <p>{posts[x].content}</p>
                  </div>;
       })
     return newarr;
@@ -33,7 +36,6 @@ class Post extends React.Component {
   render() {
     return (
       <div>
-        <h2>Work</h2>
           <div>{this.getPosts()}</div>
       </div>
     );

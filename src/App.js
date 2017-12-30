@@ -1,15 +1,15 @@
 import ReactDOM from 'react-dom';
 import React, { Component } from "react";
 import "./index.css";
-import {Route,NavLink,HashRouter} from "react-router-dom";
+import {Route,NavLink,Switch} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
+import AllPosts from './pages/AllPosts';
 
 class App extends Component {
   render() {
     return (
-      <HashRouter>
         <div>
           <header className="app-header">
             <ul className="nav-ul">
@@ -25,12 +25,14 @@ class App extends Component {
             </ul>
           </header>
           <div className="content">
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/work" component={Work}/>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/about" component={About}/>
+              <Route exact path="/work" component={Work}/>
+              <Route path="/allposts" component={AllPosts}/>
+            </Switch>
           </div>
         </div>
-      </HashRouter>
     );
   }
 }
