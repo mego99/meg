@@ -10,14 +10,17 @@
 }
 body {
   padding: 0;
-  margin:0 5vw 0 5vw;
+  margin: 0;
   font-family: 'Atlas Grotesk', sans-serif;
-  background-color:#3e3bd9;
-  color: white;
+  background-color:#181717;
+  color: #9db3fe;
+}
+div.content {
+  padding: 1vmax;
 }
 a {
-  color: white;
   text-decoration: none;
+  color:#7594ff;
 }
 
 header.app-header {
@@ -32,19 +35,14 @@ li.nav-li {
   display: inline-block;
   padding: 0 2vw 0 2vw;
   font-size: 0.8em;
+
 }
 ul.nav-ul {
   padding: 0;
 }
-header.nav a {
-  color:#6e87df;
-  &:hover{
-    color:#ffffff;
-  }
-}
-header.nav a.active {
-  color:red;
-}
 .active {
-  color: red;
+  color: white;
+}
+h1 {
+  font-size: 4em;
 }

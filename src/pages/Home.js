@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+import './Home.css';
 
 class Home extends React.Component {
+  componentDidMount() {
+    document.body.classList.toggle("home-background",true);
+  };
+  componentWillUnmount() {
+    document.body.classList.toggle("home-background",false);
+  };
+
   render() {
     return (
       <div>
