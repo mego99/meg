@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Route,NavLink,HashRouter} from "react-router-dom";
 import Post from './Post';
+import './Work.css';
 
 class Work extends React.Component {
   constructor(props) {
@@ -39,10 +40,12 @@ class Work extends React.Component {
     let posts = this.state.posts;
     let date = this.adjustDate;
     let newarr =  Object.keys(posts).map(function(x,i) {
-          return  <div key={i}>
-                    <h3>{date(posts[x].create_time)}</h3>
-                    <NavLink to={"/posts/" + posts[x].id} className="post-title">{posts[x].title}</NavLink>
-                    <p className="post-content">{posts[x].content}</p>
+          return  <div key={i} className={"post-container " +i}>
+                    <span className="post-tags">{posts[x].tags}</span>
+                    <p>
+                      <NavLink to={"/posts/" + posts[x].id} className="post-title">{posts[x].title}</NavLink>
+                      <span className="post-date">{date(posts[x].create_time)}</span>
+                    </p>
                     <Route exact path={"/posts/" + posts[x].id} component={Post} />
                   </div>;
       })
