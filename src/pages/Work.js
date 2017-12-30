@@ -15,8 +15,11 @@ class Work extends React.Component {
 
   componentDidMount() {
     document.title = 'Meguna | Work';
-    fetch('/newposts')
-      .then(response => response.json()) //resolve promise by linking to next .then
+    fetch('/api/getnewposts')
+      .then(function(response, error) {
+        if (error) throw error;
+        return response.json();
+      }) //resolve promise by linking to next .then
       .then(parsedData => {
         console.log(parsedData);
         this.setState({posts: parsedData});

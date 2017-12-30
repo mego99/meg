@@ -10,7 +10,7 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    fetch(`/posts/${this.props.match.params.id}`)
+    fetch(`/api/getposts/${this.props.match.params.id}`)
       .then(
         response => response.json()
       )
