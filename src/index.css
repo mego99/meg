@@ -68,3 +68,13 @@ ul.nav-ul {
 h1 {
   font-size: 4em;
 }
+footer {
+  margin: auto;
+  text-align: center;
+  transform: translate(0,-100%);
+}
+footer p {
+  margin: 0;
+  padding: 2.5vh;
+  font-size: 0.5em;
+}
