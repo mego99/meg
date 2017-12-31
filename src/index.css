@@ -8,6 +8,9 @@
   src: url('assets/Atlas Grotesk Web-Bold.woff');
   font-weight: bold;
 }
+html {
+  overflow-y: scroll;
+}
 div#root {
   height:100vh;
   max-height: 100%;
@@ -20,6 +23,17 @@ body {
   font-family: 'Atlas Grotesk', sans-serif;
   background-color:#171717;
   color: #9db3fe;
+}
+body.page-background {
+  background-image:url('./assets/crystals1.png');
+  background-size: auto 30vh;
+  background-repeat: no-repeat;
+  background-position: top right;
+  bottom:0;
+  height:100vh;
+  max-height:100%;
+  width:100vw;
+  max-width:100%;
 }
 div.content {
   padding: 1vmax;
