@@ -1,6 +1,6 @@
 ## my website
 
-This is the repository for my website, which can be found here: [meguna.co](meguna.co).
+This is the repository for my website, which can be found here: [meguna.co](https://meguna.co).
 
 ### A few details
 
