@@ -1,11 +1,11 @@
 @font-face{
   font-family: 'Atlas Grotesk';
-  src: url('assets/Atlas Grotesk Web-Regular.woff');
+  src: url('assets/fonts/Atlas Grotesk Web-Regular.woff');
   font-weight: normal;
 }
 @font-face{
   font-family: 'Atlas Grotesk';
-  src: url('assets/Atlas Grotesk Web-Bold.woff');
+  src: url('assets/fonts/Atlas Grotesk Web-Bold.woff');
   font-weight: bold;
 }
 html {
