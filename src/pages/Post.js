@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Switch,Route} from "react-router-dom";
+const ReactMarkdown = require('react-markdown');
 
 class Post extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Post extends Component {
     let newarr =  Object.keys(posts).map(function(x,i) {
           return <div key={i}>
                     <h1>{posts[x].title}</h1>
-                    <p>{posts[x].content}</p>
+                    <ReactMarkdown source={posts[x].content}/>
                  </div>;
       })
     return newarr;
