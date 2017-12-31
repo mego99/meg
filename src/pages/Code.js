@@ -38,12 +38,26 @@ class Code extends React.Component {
     return d.toLocaleDateString('en-US', dateOptions);
   }
 
+  parseTags(tags) {
+    console.log(tags);
+    let tagsArr = tags.split(" ");
+    console.log(tagsArr);
+    let output = Object.keys(tagsArr).map(function(x) {
+      console.log(x);
+      return <span key={x} className="tag">{tagsArr[x] }</span>
+    });
+    console.log(output);
+    return output;
+  }
+
   getPosts() {
     let posts = this.state.posts;
     let date = this.adjustDate;
+    let parseTags = this.parseTags;
+
     let newarr =  Object.keys(posts).map(function(x,i) {
       return  <div key={i} className={"post-container " +i}>
-                    <span className="post-tags">{posts[x].tags}</span>
+                    <div className="post-tags">{parseTags(posts[x].tags)}</div>
                     <p>
                       <Link to={`/allposts/${posts[x].id}`} className="post-title">{posts[x].title}</Link>
                       <span className="post-date">{date(posts[x].create_time)}</span>
@@ -52,6 +66,7 @@ class Code extends React.Component {
     })
     return newarr;
   }
+
 
   render() {
     return (

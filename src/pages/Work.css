@@ -4,16 +4,22 @@ div.post-container {
 .post-title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.5em;
-}
-.post-tags {
-  padding:2px;
-  background-color: #4558db;
-  color: #9aa6f9;
+  font-size: 2em;
 }
 span.post-date {
   padding: 0 1em 0 1em;
   color: #7480c1;
   white-space: nowrap;
   text-transform: uppercase;
+}
+
+span.tag {
+  margin:0.5em;
+  padding:0.3em;
+  background-color: #2a39a1;
+  color: #9aa6f9;
+  font-size: 0.8em;
+}
+span.tag:first-child {
+  margin-left: 0;
 }
