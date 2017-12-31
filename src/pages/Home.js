@@ -12,7 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>Meguna Okawa</h1>
+        <h1>Meguna</h1>
         <p>Hi, I'm Meguna! Check out some of my work here. </p>
 
       </div>

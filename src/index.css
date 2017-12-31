@@ -8,11 +8,17 @@
   src: url('assets/Atlas Grotesk Web-Bold.woff');
   font-weight: bold;
 }
+div#root {
+  height:100vh;
+  max-height: 100%;
+  top:0;
+}
 body {
   padding: 0;
   margin: 0;
+  top:0;
   font-family: 'Atlas Grotesk', sans-serif;
-  background-color:#181717;
+  background-color:#171717;
   color: #9db3fe;
 }
 div.content {
@@ -28,8 +34,9 @@ header.app-header {
   width: 100vw;
   max-width: 100%;
   text-align: center;
-  margin: 5vh 0 5vh 0;
+  padding: 5vh 0 5vh 0;
   left:0;
+  top:0;
   height:10vh;
 }
 li.nav-li {
