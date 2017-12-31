@@ -10,6 +10,8 @@ import Code from './pages/Code';
 import Design from './pages/Design';
 import AllPosts from './pages/AllPosts';
 import EditPost from './pages/EditPost';
+import NewPost from './pages/NewPost';
+
 
 class App extends Component {
   render() {
@@ -38,6 +40,8 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/allposts" component={AllPosts}/>
               <Route path="/editpost" component={EditPost}/>
+              <Route path="/newpost" component={NewPost}/>
+
             </Switch>
           </div>
         </div>
