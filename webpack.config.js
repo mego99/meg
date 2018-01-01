@@ -8,6 +8,12 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/static/',
+    rules: [
+      {
+        test: /\.md$/,
+        use: 'raw-loader'
+      }
+    ]
   },
   module: {
     loaders: [
