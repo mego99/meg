@@ -51,11 +51,11 @@ class App extends Component {
               <Route path="/newpost" component={NewPost}/>
               <Route path="/playground" component={Playground}/>
               <Route path="/postlist" component={PostList}/>
-              <Route path="/tagposts" component={TagRouter}/>
+              <Route path="/tag" component={TagRouter}/>
             </Switch>
           </main>
           <footer>
-            <p>Copyright &copy; 2017 Meguna</p>
+            <p>Copyright &copy; 2018 Meguna</p>
           </footer>
         </div>
     );

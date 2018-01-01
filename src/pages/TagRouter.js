@@ -4,8 +4,6 @@ import Post from './Post';
 import Tag from './Tag';
 import About from './About';
 
-
-
 class AllPosts extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +15,8 @@ class AllPosts extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/tagposts' component={About} />
-        <Route path='/tagposts/:tag' component={Tag} />
+        <Route exact path='/tag' component={About} />
+        <Route path='/tag/:tag' component={Tag} />
       </Switch>
     );
   }
