@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Switch,Route} from "react-router-dom";
-const ReactMarkdown = require('react-markdown');
+import marked from 'marked';
 
 class Post extends Component {
   constructor(props) {
@@ -26,15 +26,37 @@ class Post extends Component {
   }
 
   getPosts() {
+    let getMarkdownText = this.getMarkdownText;
     console.log(this.state.posts);
     let posts = this.state.posts;
     let newarr =  Object.keys(posts).map(function(x,i) {
-          return <div key={i}>
-                    <h1>{posts[x].title}</h1>
-                    <ReactMarkdown source={posts[x].content}/>
-                 </div>;
+      let content = posts[x].content;
+
+      return <div key={i}>
+                <h1>{posts[x].title}</h1>
+                <div dangerouslySetInnerHTML={getMarkdownText(posts[x].content)} />
+             </div>;
       })
     return newarr;
+  }
+
+  getMarkdownText(md) {
+    let renderer = new marked.Renderer();
+
+// `${process.env.PUBLIC_URL}/header-images/${posts[x].image_link}-25.png`
+
+    marked.setOptions({
+      renderer: new marked.Renderer(),
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: false,
+      smartLists: true,
+      smartypants: true
+    });
+    let rawMarkup = marked(md, {sanitize: true});
+    return { __html: rawMarkup };
   }
 
   render() {

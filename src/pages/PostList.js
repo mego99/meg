@@ -56,7 +56,7 @@ class PostList extends React.Component {
     let newarr =  Object.keys(posts).map(function(x,i) {
       console.log(posts[x]);
       return  <div key={i} className={"post-container " +i}>
-                <img src={`${process.env.PUBLIC_URL}/images/${posts[x].image_link}-25.png`} className="post-thumb"/>
+                <img src={`${process.env.PUBLIC_URL}/header-images/${posts[x].image_link}-25.png`} className="post-thumb"/>
                 <div className="post-infobox">
                   <div className="post-tags">{parseTags(posts[x].tags)}</div>
                   <Link to={`/allposts/${posts[x].id}`} className="post-title">{posts[x].title}</Link>
