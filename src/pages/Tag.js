@@ -20,7 +20,7 @@ class Tag extends React.Component {
     console.log(this.state.tag);
     return (
       <div>
-        <h1>Code</h1>
+        <h1>{this.state.tag}</h1>
         <PostList postlistorigin={`/api/gettaggedposts/${this.state.tag}`}></PostList>
       </div>
     );
