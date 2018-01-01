@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {Switch,Route} from "react-router-dom";
 import Post from './Post';
-import Work from './Work';
 import About from './About';
 
 

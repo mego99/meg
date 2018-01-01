@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import {Route,Link} from "react-router-dom";
 import Post from './Post';
 import './PostList.css';
-import AllPosts from './AllPosts.js';
+import PostRouter from './PostRouter.js';
 import About from './About';
+import TagRouter from './TagRouter.js';
 
 class PostList extends React.Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class PostList extends React.Component {
     console.log(tagsArr);
     let output = Object.keys(tagsArr).map(function(x) {
       console.log(x);
-      return <span key={x} className="tag">{tagsArr[x] }</span>
+      return <Link to={`/tagposts/${tagsArr[x]}`} key={x} className="tag">{tagsArr[x]}</Link>
     });
     console.log(output);
     return output;

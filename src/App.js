@@ -8,11 +8,12 @@ import Work from "./pages/Work";
 import Art from './pages/Art';
 import Code from './pages/Code';
 import Design from './pages/Design';
-import AllPosts from './pages/AllPosts';
+import PostRouter from './pages/PostRouter';
 import EditPost from './pages/EditPost';
 import NewPost from './pages/NewPost';
 import Playground from './pages/Playground';
 import PostList from './pages/PostList';
+import TagRouter from './pages/TagRouter';
 
 class App extends Component {
   constructor(props) {
@@ -45,11 +46,12 @@ class App extends Component {
               <Route exact path="/code" component={Code}/>
               <Route exact path="/design" component={Design}/>
               <Route exact path="/" component={Home}/>
-              <Route path="/allposts" component={AllPosts}/>
+              <Route path="/allposts" component={PostRouter}/>
               <Route path="/editpost" component={EditPost}/>
               <Route path="/newpost" component={NewPost}/>
               <Route path="/playground" component={Playground}/>
               <Route path="/postlist" component={PostList}/>
+              <Route path="/tagposts" component={TagRouter}/>
             </Switch>
           </main>
           <footer>
