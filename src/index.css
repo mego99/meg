@@ -42,7 +42,10 @@ body.page-background {
 }
 a {
   text-decoration: none;
-  color:#ca71ff;
+  color:#7594ff;
+}
+.content a {
+  color:#5847e0;
 }
 
 header.app-header {
