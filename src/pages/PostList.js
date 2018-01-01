@@ -41,14 +41,10 @@ class PostList extends React.Component {
   }
 
   parseTags(tags) {
-    console.log(tags);
     let tagsArr = tags.split(" ");
-    console.log(tagsArr);
     let output = Object.keys(tagsArr).map(function(x) {
-      console.log(x);
       return <Link to={`/tag/${tagsArr[x]}`} key={x} className="tag">{tagsArr[x]}</Link>
     });
-    console.log(output);
     return output;
   }
 
@@ -58,13 +54,16 @@ class PostList extends React.Component {
     let parseTags = this.parseTags;
 
     let newarr =  Object.keys(posts).map(function(x,i) {
+      console.log(posts[x]);
       return  <div key={i} className={"post-container " +i}>
-                    <div className="post-tags">{parseTags(posts[x].tags)}</div>
-                    <p>
-                      <Link to={`/allposts/${posts[x].id}`} className="post-title">{posts[x].title}</Link>
-                      <span className="post-date">{date(posts[x].create_time)}</span>
-                    </p>
-                  </div>;
+                <img src={`${process.env.PUBLIC_URL}/images/${posts[x].image_link}-25.png`} className="post-thumb"/>
+                <div className="post-infobox">
+                  <div className="post-tags">{parseTags(posts[x].tags)}</div>
+                  <Link to={`/allposts/${posts[x].id}`} className="post-title">{posts[x].title}</Link>
+                  <p className="post-date">{date(posts[x].create_time)}</p>
+                </div>
+
+              </div>;
     })
     return newarr;
   }
