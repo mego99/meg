@@ -5,14 +5,10 @@ class About extends React.Component {
     return (
       <div>
         <h2>About</h2>
-        <p>Cras facilisis urna ornare ex volutpat, et
-        convallis erat elementum. Ut aliquam, ipsum vitae
-        gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-        metus nec massa. Maecenas hendrerit laoreet augue
-        nec molestie. Cum sociis natoque penatibus et magnis
-        dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Hi! I'm Meguna, currently a high school senior in Tokyo. This is my personal blog.</p>
+        <p>I mostly post code- and art-related things.</p>
+        <p>For info on this website and how it was built, check <a href="">this post</a>. Alternatively, check out the <a href="https://github.com/mego99/meg">github repo</a>.</p>
 
-        <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
       </div>
     );
   }

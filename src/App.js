@@ -11,7 +11,7 @@ import Design from './pages/Design';
 import AllPosts from './pages/AllPosts';
 import EditPost from './pages/EditPost';
 import NewPost from './pages/NewPost';
-
+import Playground from './pages/Playground';
 
 class App extends Component {
   render() {
@@ -21,8 +21,8 @@ class App extends Component {
             <ul className="nav-ul">
               <li className="nav-li"><NavLink exact to="/">Home</NavLink></li>
               <li className="nav-li"><NavLink to="/work">Work</NavLink></li>
-              <li className="nav-li"><NavLink to="/about">Links</NavLink></li>
-              <li className="nav-li"><a href="https://playground.meguna.co" target="_blank" >Playground</a></li>
+              <li className="nav-li"><NavLink to="/about">About</NavLink></li>
+              <li className="nav-li"><NavLink to="/playground">Playground</NavLink></li>
             </ul>
             <ul className="nav-ul" id="dropdown">
               <li className="nav-li"><NavLink to="/art">Art</NavLink></li>
@@ -41,6 +41,7 @@ class App extends Component {
               <Route path="/allposts" component={AllPosts}/>
               <Route path="/editpost" component={EditPost}/>
               <Route path="/newpost" component={NewPost}/>
+              <Route path="/playground" component={Playground}/>
 
             </Switch>
           </main>
