@@ -12,8 +12,15 @@ import AllPosts from './pages/AllPosts';
 import EditPost from './pages/EditPost';
 import NewPost from './pages/NewPost';
 import Playground from './pages/Playground';
+import PostList from './pages/PostList';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      postlistorigin: ''
+    };
+  }
   render() {
     return (
         <div>
@@ -42,7 +49,7 @@ class App extends Component {
               <Route path="/editpost" component={EditPost}/>
               <Route path="/newpost" component={NewPost}/>
               <Route path="/playground" component={Playground}/>
-
+              <Route path="/postlist" component={PostList}/>
             </Switch>
           </main>
           <footer>
