@@ -30,7 +30,7 @@ class App extends Component {
               <li className="nav-li"><NavLink to="/design">Design</NavLink></li>
             </ul>
           </header>
-          <div className="content">
+          <main className="content">
             <Switch>
               <Route exact path="/about" component={About}/>
               <Route exact path="/work" component={Work}/>
@@ -43,7 +43,10 @@ class App extends Component {
               <Route path="/newpost" component={NewPost}/>
 
             </Switch>
-          </div>
+          </main>
+          <footer>
+            <p>Copyright &copy; 2017 Meguna</p>
+          </footer>
         </div>
     );
   }

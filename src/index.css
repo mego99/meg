@@ -12,9 +12,9 @@ html {
   overflow-y: scroll;
 }
 div#root {
-  height:100vh;
-  max-height: 100%;
   top:0;
+  position: relative;
+  min-height: 100%;
 }
 body {
   padding: 0;
@@ -35,9 +35,10 @@ body.page-background {
   width:100vw;
   max-width:100%;
 }
-div.content {
+.content {
   padding: 1vmax;
   margin: 0 7vw 0 7vw;
+  padding-bottom:3em;
 }
 a {
   text-decoration: none;
@@ -71,7 +72,13 @@ h1 {
 footer {
   margin: auto;
   text-align: center;
-  transform: translate(0,-100%);
+  position: absolute;
+  width:100vw;
+  max-width: 100%;
+  bottom: 0;
+  right:0;
+  left:0;
+  height:3em;
 }
 footer p {
   margin: 0;
