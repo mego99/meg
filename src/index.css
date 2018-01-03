@@ -37,7 +37,7 @@ body.page-background {
 }
 .content {
   padding: 1vmax;
-  margin: 0 7vw 0 7vw;
+  margin: 0 10vw 0 10vw;
   padding-bottom:3em;
 }
 a {
@@ -46,6 +46,17 @@ a {
 }
 .content a {
   color:#5847e0;
+}
+.content p,li {
+  line-height: 1.5em;
+}
+.content li {
+  list-style-type: disc;
+}
+.content pre  {
+  background-color: #251466;
+  padding: 3vw;
+  overflow: auto;
 }
 
 header.app-header {
