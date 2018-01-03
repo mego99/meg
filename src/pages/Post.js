@@ -48,7 +48,7 @@ class Post extends Component {
                </div>;
       }
       catch(e) {
-        return <div></div>
+        return <div><p>Coming Soon!</p></div>
       };
     })
     return newarr;
