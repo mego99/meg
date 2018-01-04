@@ -3,6 +3,7 @@ import {Switch,Route} from "react-router-dom";
 import marked from 'marked';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/vs2015.css';
+import './Post.css';
 
 let te = require('text-encoding');
 
@@ -37,6 +38,8 @@ class Post extends Component {
       })
   }
 
+
+
   getPosts() {
     let getMarkdownText = this.getMarkdownText;
     let posts = this.state.posts;
@@ -55,21 +58,24 @@ class Post extends Component {
   }
 
   getImages() {
-    let TextDecoder = te.TextDecoder;
     let images = this.state.post_images;
+    console.log(images);
     console.log(images);
     let newarr =  Object.keys(images).map(function(x,i) {
       let baseStr = 'data:image/jpeg;base64,';
       console.log(images[x]);
-      // let data = btoa(String.fromCharCode.apply(null,images[x].image.data));
-      // console.log(new TextDecoder('base-64').decode(new Uint8Array(images[x].image.data)));
+      var base64 = btoa(
+        new Uint8Array(images[x].image.data)
+        .reduce((data, byte) => data + String.fromCharCode(byte), '')
+      );
       console.log(images[x].image);
       console.log(images[x].image.data);
-      return <div key={i} >
-              <img className="post-image" src={baseStr}></img>
-              <p>image</p>
+      return <div key={i} className="post-image-container">
+              <img className="post-image" src={baseStr + base64} alt={images[x].description}></img>
+              <p className="image-description">{images[x].description}</p>
              </div>
-    })
+    });
+    console.log(newarr);
     return newarr;
   }
 
@@ -96,6 +102,7 @@ class Post extends Component {
     return (
       <div>
           <div>{this.getPosts()}</div>
+          <div>{this.getImages()}</div>
       </div>
     );
   }

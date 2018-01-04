@@ -48,15 +48,49 @@ class PostList extends React.Component {
     return output;
   }
 
+  getImage(i) {
+    let imageData, imageDescription;
+    let baseStr = 'data:image/jpeg;base64,';
+
+    fetch(`/api/getpostmainimage/${i}`)
+      .then(
+        response => response.json()
+      )
+      .then(parsedData => {
+        console.log(parsedData);
+        imageData = parsedData[0].image.data;
+        imageDescription = parsedData[0].description;
+        //
+        console.log(imageData);
+        console.log(imageDescription);
+
+        let base64 = btoa(
+          new Uint8Array(imageData)
+          .reduce((data, byte) => data + String.fromCharCode(byte), '')
+        );
+        try {
+          return <img className="post-image" src={baseStr + base64} alt={imageDescription}></img>;
+        }
+        catch(e) {
+          return "error!" + e;
+        }
+      });
+  }
+
   getPosts() {
     let posts = this.state.posts;
     let date = this.adjustDate;
     let parseTags = this.parseTags;
+    let getImage = this.getImage;
+    console.log(getImage);
 
     let newarr =  Object.keys(posts).map(function(x,i) {
       console.log(posts[x]);
+      console.log(posts[x].id);
+      console.log(getImage[1]);
+
       return  <div key={i} className={"post-container " +i}>
-                {/*<img src={`${process.env.PUBLIC_URL}/header-images/${posts[x].image_link}-25.png`} className="post-thumb"/>*/}
+                <img src={`${process.env.PUBLIC_URL}/header-images/${posts[x].image_link}-25.png`} className="post-thumb"/>
                 <div className="post-infobox">
                   <div className="post-tags">{parseTags(posts[x].tags)}</div>
                   <Link to={`/allposts/${posts[x].id}`} className="post-title">{posts[x].title}</Link>

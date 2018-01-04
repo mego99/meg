@@ -1,0 +1,14 @@
+.image-description {
+  font-style: oblique;
+  color: #6979af;
+  text-align: center;
+}
+.post-image {
+  width:60vw;
+  padding:1vh;
+}
+.post-image-container {
+  margin:auto;
+  padding:5vh;
+  width:60vw;
+}
