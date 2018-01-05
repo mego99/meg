@@ -22,7 +22,6 @@ class Post extends Component {
         response => response.json()
       )
       .then(parsedData => {
-        console.log(parsedData);
         this.setState({posts: parsedData});
         this.setState({post_title:parsedData[0]['title']});
         document.title = 'Meguna | ' + this.state.post_title;
@@ -33,7 +32,6 @@ class Post extends Component {
         response => response.json()
       )
       .then(parsedData => {
-        console.log(parsedData);
         this.setState({post_images: parsedData});
       })
   }
@@ -59,23 +57,17 @@ class Post extends Component {
 
   getImages() {
     let images = this.state.post_images;
-    console.log(images);
-    console.log(images);
     let newarr =  Object.keys(images).map(function(x,i) {
       let baseStr = 'data:image/jpeg;base64,';
-      console.log(images[x]);
-      var base64 = btoa(
+            var base64 = btoa(
         new Uint8Array(images[x].image.data)
         .reduce((data, byte) => data + String.fromCharCode(byte), '')
       );
-      console.log(images[x].image);
-      console.log(images[x].image.data);
       return <div key={i} className="post-image-container">
               <img className="post-image" src={baseStr + base64} alt={images[x].description}></img>
               <p className="image-description">{images[x].description}</p>
              </div>
     });
-    console.log(newarr);
     return newarr;
   }
 
