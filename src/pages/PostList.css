@@ -6,7 +6,7 @@
 .post-container .post-infobox {
   display: flex;
   flex-direction: column;
-  margin-left: 5vw;
+  margin-left: 2vw;
 }
 .post-title {
   text-transform: uppercase;
@@ -38,5 +38,5 @@
   font-size: 0.8em;
 }
 .post-thumb {
-  height:10em;
+  width:20vw;
 }
