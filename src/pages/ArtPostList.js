@@ -1,10 +1,10 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import './PostList.css';
+import './ArtPostList.css';
 import About from './About';
 import TagRouter from './TagRouter.js';
 
-class PostList extends React.Component {
+class ArtPostList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,7 +35,7 @@ class PostList extends React.Component {
     ];
     let t = date.split(/[- :TZ]/);
     let d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-    let dateOptions = { month:'long', day:'numeric', year:'numeric', timeZone:'Asia/Tokyo' };
+    let dateOptions = { month:'long', year:'numeric', timeZone:'Asia/Tokyo' };
     return d.toLocaleDateString('en-US', dateOptions);
   }
 
@@ -55,16 +55,14 @@ class PostList extends React.Component {
 
     let newarr =  Object.keys(posts).map(function(x,i) {
 
-      return  <div key={i} className={"post-container " +i}>
-                <div class="post-thumb-container">
-                  {<img src={`/api/static/post-images/${posts[x].image_link}`} className="post-thumb"/>}
-                </div>
-                <div className="post-infobox">
-                  <div className="post-tags">{parseTags(posts[x].tags)}</div>
-                  <Link to={`/allposts/${posts[x].id}`} className="post-title">{posts[x].title}</Link>
-                  <p className="post-date">{date(posts[x].create_time)}</p>
-                </div>
-
+      return  <div key={i} className="art-image-thumb-container">
+                  <div className="art-post-title">
+                    <p className="art-post-date">{date(posts[x].create_time)}</p>
+                    <h3>{posts[x].title}</h3>
+                  </div>
+                  <Link to={`/allposts/${posts[x].id}`}>
+                    {<img src={`/api/static/post-images/${posts[x].image_link}`} className="art-post-thumb"/>}
+                  </Link>
               </div>;
     })
     return newarr;
@@ -73,10 +71,10 @@ class PostList extends React.Component {
   render() {
     return (
       <div>
-          <div>{this.getPosts()}</div>
+          <div className="art-post-container">{this.getPosts()}</div>
       </div>
     );
   }
 }
 
-export default PostList;
+export default ArtPostList;

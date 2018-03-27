@@ -14,6 +14,7 @@ import NewPost from './pages/NewPost';
 import Playground from './pages/Playground';
 import PostList from './pages/PostList';
 import TagRouter from './pages/TagRouter';
+import ArtPostList from './pages/ArtPostList';
 
 class App extends Component {
   constructor(props) {
@@ -51,6 +52,7 @@ class App extends Component {
               <Route path="/newpost" component={NewPost}/>
               <Route path="/playground" component={Playground}/>
               <Route path="/postlist" component={PostList}/>
+              <Route path="/artpostlist" component={ArtPostList}/>
               <Route path="/tag" component={TagRouter}/>
             </Switch>
           </main>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './PostList.css';
-import PostList from './PostList';
+import ArtPostList from './ArtPostList';
 
 class Art extends React.Component {
   componentDidMount() {
@@ -11,7 +11,7 @@ class Art extends React.Component {
     return (
       <div>
         <h1>Art</h1>
-          <PostList postlistorigin='/api/getartposts'></PostList>
+          <ArtPostList postlistorigin='/api/getartposts'></ArtPostList>
       </div>
     );
   }
