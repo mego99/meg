@@ -1,6 +1,6 @@
 @font-face{
   font-family: 'Atlas Grotesk';
-  src: url('assets/fonts/Atlas Grotesk Web-Regular.woff');
+  src: url('assets/fonts/AtlasGrotesk-Thin.woff');
   font-weight: normal;
 }
 @font-face{
@@ -22,7 +22,10 @@ body {
   top:0;
   font-family: 'Atlas Grotesk', sans-serif;
   background-color:#171717;
-  color: #9db3fe;
+  color: #afc1ff;
+}
+p {
+  font-size:1.2em;
 }
 body.page-background {
   background-image:url('./assets/crystals1.png');
