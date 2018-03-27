@@ -4,8 +4,9 @@
   text-align: center;
 }
 .post-image {
-  width:60vw;
-  padding:1vh;
+  max-width:78vw;
+  margin: auto;
+  padding:0;
 }
 .post-image-container {
   margin:auto;
