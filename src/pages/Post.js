@@ -36,8 +36,6 @@ class Post extends Component {
       })
   }
 
-
-
   getPosts() {
     let getMarkdownText = this.getMarkdownText;
     let posts = this.state.posts;
@@ -55,26 +53,10 @@ class Post extends Component {
     return newarr;
   }
 
-  getImages() {
-    let images = this.state.post_images;
-    let newarr =  Object.keys(images).map(function(x,i) {
-      let baseStr = 'data:image/jpeg;base64,';
-            var base64 = btoa(
-        new Uint8Array(images[x].image.data)
-        .reduce((data, byte) => data + String.fromCharCode(byte), '')
-      );
-      return <div key={i} className="post-image-container">
-              <img className="post-image" src={baseStr + base64} alt={images[x].description}></img>
-              <p className="image-description">{images[x].description}</p>
-             </div>
-    });
-    return newarr;
-  }
-
   getMarkdownText(md) {
     let renderer = new marked.Renderer();
     marked.setOptions({
-      renderer: new marked.Renderer(),
+      renderer: renderer,
       gfm: true,
       tables: true,
       breaks: false,
@@ -86,6 +68,16 @@ class Post extends Component {
         return require('highlight.js').highlightAuto(code).value;
       }
     });
+
+    renderer.image = function (href, title, text) {
+
+      return `<img
+                src=/static/post-images/${href}
+                alt=${text}
+                class=post-image
+              />`;
+    };
+
     let rawMarkup = marked(md, {sanitize: true});
     return { __html: rawMarkup };
   }
@@ -94,7 +86,6 @@ class Post extends Component {
     return (
       <div>
           <div>{this.getPosts()}</div>
-          <div>{this.getImages()}</div>
       </div>
     );
   }
