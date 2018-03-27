@@ -72,7 +72,7 @@ class Post extends Component {
     renderer.image = function (href, title, text) {
 
       return `<img
-                src=/static/post-images/${href}
+                src=/api/static/post-images/${href}
                 alt=${text}
                 class=post-image
               />`;
