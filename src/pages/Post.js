@@ -53,6 +53,8 @@ class Post extends Component {
     return newarr;
   }
 
+
+
   getMarkdownText(md) {
     let renderer = new marked.Renderer();
     marked.setOptions({
@@ -70,9 +72,16 @@ class Post extends Component {
     });
 
     renderer.image = function (href, title, text) {
-
+      function imageExists(image_url){
+          var http = new XMLHttpRequest();
+          http.open('HEAD', image_url, false);
+          http.send();
+          return http.status != 404;
+      }
+      let img = '';
+      imageExists('/api/static/post-images/' + href) ? img = `${href}` : img = 'def.png'
       return `<img
-                src=/api/static/post-images/${href}
+                src=/api/static/post-images/${img}
                 alt=${text}
                 class=post-image
               />`;
