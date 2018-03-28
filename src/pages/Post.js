@@ -81,7 +81,7 @@ class Post extends Component {
       let img = '';
       imageExists('/api/static/post-images/' + href) ? img = `${href}` : img = 'def.png'
       return `<img
-                class=post-image src=/api/static/post-images/${img} alt=${text} 
+                class=post-image src=/api/static/post-images/${img} alt=${text}
               />`;
     };
 
