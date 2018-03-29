@@ -9,21 +9,30 @@ class PostList extends React.Component {
     super(props);
     this.state = {
       posts: [],
-      postlistorigin: ''
+      postlistorigin: '',
+      fetchstatus: true
     };
     this.parseTags = this.parseTags.bind(this);
   }
 
   componentDidMount() {
+    let badState = this.badState;
     fetch(this.props.postlistorigin)
       .then(function(response, error) {
-        if (error) throw error;
+        if (response.status !== 200) {
+          badState();
+          return '{}';
+        };
         return response.json();
       }) //resolve promise by linking to next .then
       .then(parsedData => {
         this.setState({posts: parsedData});
       })
 
+  }
+
+  badState = () => {
+    this.setState({fetchstatus: false});
   }
 
   adjustDate(date) {
@@ -71,11 +80,19 @@ class PostList extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-          <div>{this.getPosts()}</div>
-      </div>
-    );
+    if (this.state.fetchstatus) {
+      return (
+        <div>
+            <div>{this.getPosts()}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <p>We seem to be having connectivity issues. Sorry!</p>
+        </div>
+      )
+    }
   }
 }
 
