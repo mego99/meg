@@ -1,15 +1,47 @@
 import React, { Component } from "react";
+import './About.css';
 
 class About extends React.Component {
+
+  createTable() {
+    let dataTable = {
+        'name':'Meguna',
+        'hometown':'Tokyo',
+        'occupation':'freshman at Tufts University',
+        'intended major':'computer science',
+        'interests':'web applications, statistics, data visualization',
+        'currently working on':'becoming more familiar with React',
+        'hobbies':'drawing, programming, eating pastries',
+        'currently obsessed with':'creating 3D graphics with Cinema 4D',
+        'github':'https://github.com/mego99',
+        'dribbble':'https://dribbble.com/megrivers'
+      }
+
+    let output = Object.keys(dataTable).map(function(x,i) {
+      return <div key={i} className='data-row'>
+                <span className='left'>{x}</span>
+                <span className='right'>{dataTable[x]}</span>
+             </div>
+    });
+    console.log(output);
+    return output;
+  }
+
   render() {
+
+
     return (
       <div>
         <h2>About</h2>
-        <p>Hi! I'm Meguna, and this is my personal blog.</p>
-        <p>I'm currently a high school senior in Tokyo and will be attending Tufts University in the fall.</p>
-        <p>For info on this website and how it was built, check <a href="/tag/website-2.0">these posts</a>. Alternatively, check out the <a href="https://github.com/mego99/meg">github repo</a>.</p>
+        <p>Hi! I’m Meguna and this is where I showcase and (casually) comment on some of my work so far.
+          For an official CV or any general inquiries, please contact: <a href='mailto:megrivers99@gmail.com'>megrivers99@gmail.com</a>.</p>
 
-      </div>
+        <div className='data-table'>
+          {this.createTable()}
+        </div>
+  </div>
+
+
     );
   }
 }

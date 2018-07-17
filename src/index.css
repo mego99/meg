@@ -105,6 +105,9 @@ ul.nav-ul {
 h1 {
   font-size: 4em;
 }
+h2 {
+  text-align: center;
+}
 footer {
   margin: auto;
   text-align: center;
