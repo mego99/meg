@@ -8,6 +8,11 @@
   src: url('assets/fonts/Atlas Grotesk Web-Bold.woff');
   font-weight: bold;
 }
+@font-face{
+  font-family: 'Cerebri Sans';
+  src: url('assets/fonts/CerebriSans-HeavyItalic.woff');
+  font-weight: bold italic;
+}
 html {
   overflow-y: scroll;
 }
@@ -21,17 +26,12 @@ body {
   margin: 0;
   top:0;
   font-family: 'Atlas Grotesk', sans-serif;
-  background-color:#231f2b;
-  color: #afc1ff;
+  color: #1a1a1a;
 }
 p {
   font-size:1.2em;
 }
 body.page-background {
-  background-image:url('./assets/crystals1.png');
-  background-size: auto 30vh;
-  background-repeat: no-repeat;
-  background-position: top right;
   bottom:0;
   height:100vh;
   max-height:100%;
@@ -44,7 +44,7 @@ body.page-background {
 }
 a {
   text-decoration: none;
-  color:#7594ff;
+  color:#000000;
 }
 .content a {
   color:#5847e0;
@@ -61,6 +61,26 @@ a {
   overflow: auto;
 }
 
+h1.header-title {
+  font-family: 'Cerebri Sans', sans-serif;
+  font-weight: bold italic;
+  font-size: 4em;
+  margin: 0 2vw 0 2vw;
+}
+mark {
+  display: inline-block;
+  line-height: 0em;
+  padding-right: 0.2em;
+  padding-bottom: 0.4em;
+  background-color:#3d79ff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 header.app-header {
   width: 100vw;
   max-width: 100%;
@@ -80,7 +100,7 @@ ul.nav-ul {
   padding: 0;
 }
 .active {
-  color: white;
+  color: #0021ff;
 }
 h1 {
   font-size: 4em;

@@ -27,16 +27,14 @@ class App extends Component {
     return (
         <div>
           <header className="app-header">
+            <h1 className="header-title"><mark>Meguna's Work</mark></h1>
             <ul className="nav-ul">
               <li className="nav-li"><NavLink exact to="/">Home</NavLink></li>
-              <li className="nav-li"><NavLink to="/work">Work</NavLink></li>
               <li className="nav-li"><NavLink to="/about">About</NavLink></li>
-              <li className="nav-li"><NavLink to="/playground">Playground</NavLink></li>
             </ul>
             <ul className="nav-ul" id="dropdown">
               <li className="nav-li"><NavLink to="/art">Art</NavLink></li>
               <li className="nav-li"><NavLink to="/code">Code</NavLink></li>
-              <li className="nav-li"><NavLink to="/design">Design</NavLink></li>
             </ul>
           </header>
           <main className="content">
