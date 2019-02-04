@@ -5,8 +5,6 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/vs2015.css';
 import './Post.css';
 
-let Remarkable = require('remarkable');
-
 let te = require('text-encoding');
 
 class Post extends Component {
@@ -94,24 +92,6 @@ class Post extends Component {
     };
 
     let rawMarkup = marked(md, {sanitize: true});
-    // let rmk = new Remarkable({
-    //   html:true,
-    //   highlight: function(str, lang) {
-    //     return hljs.highlightAuto(str).value
-    //   }
-    //   // highlight: function(str, lang) {
-    //   //   if (lang && hljs.getLanguage(lang)) {
-    //   //     try {
-    //   //       return hljs.highlight(lang, str).value;
-    //   //     } catch (err) {}
-    //   //   }
-    //   //   try {
-    //   //     return hljs.highlightAuto(str).value;
-    //   //   } catch (err) {}
-    //   // return ''; // use external default escaping
-    //   // }
-    // });
-    // let rawMarkup = rmk.render(md);
     console.log(rawMarkup);
     return { __html: rawMarkup };
   }
