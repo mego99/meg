@@ -18,6 +18,7 @@
     "react-marked": "^0.3.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "remarkable": "^1.7.1",
     "text-encoding": "^0.6.4"
   },
   "scripts": {

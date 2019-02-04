@@ -5,6 +5,8 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/vs2015.css';
 import './Post.css';
 
+let Remarkable = require('remarkable');
+
 let te = require('text-encoding');
 
 class Post extends Component {
@@ -39,15 +41,21 @@ class Post extends Component {
   getPosts() {
     let getMarkdownText = this.getMarkdownText;
     let posts = this.state.posts;
+    console.log(posts);
+    console.log(posts[0]);
     let newarr =  Object.keys(posts).map(function(x,i) {
       try {
+        console.log(posts[x].content);
+        let abab = getMarkdownText(posts[x].content);
+        let str = "### Part One: Designing the Project";
         return <div key={i}>
                   <h1>{posts[x].title}</h1>
-                  <div dangerouslySetInnerHTML={getMarkdownText(posts[x].content)} />
+                  <div dangerouslySetInnerHTML={ getMarkdownText(posts[x].content) } />
                </div>;
       }
       catch(e) {
-        return <div><p>Coming Soon!</p></div>
+        console.log(e);
+        return <div key={i}><p>Coming Soon!</p></div>
       };
     })
     return newarr;
@@ -86,6 +94,25 @@ class Post extends Component {
     };
 
     let rawMarkup = marked(md, {sanitize: true});
+    // let rmk = new Remarkable({
+    //   html:true,
+    //   highlight: function(str, lang) {
+    //     return hljs.highlightAuto(str).value
+    //   }
+    //   // highlight: function(str, lang) {
+    //   //   if (lang && hljs.getLanguage(lang)) {
+    //   //     try {
+    //   //       return hljs.highlight(lang, str).value;
+    //   //     } catch (err) {}
+    //   //   }
+    //   //   try {
+    //   //     return hljs.highlightAuto(str).value;
+    //   //   } catch (err) {}
+    //   // return ''; // use external default escaping
+    //   // }
+    // });
+    // let rawMarkup = rmk.render(md);
+    console.log(rawMarkup);
     return { __html: rawMarkup };
   }
 
