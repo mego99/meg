@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid102\'02\'01.;}{\levelnumbers\'01;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww14920\viewh8400\viewkind0
+\deftab720
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls1\ilvl0
+\f0\fs30 \cf2 1. {\field{\*\fldinst{HYPERLINK "https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \ulc2 initial server setup}}\expnd0\expndtw0\kerning0
+\ul \ulc2  \
+		\ulnone for the firewall, also enable web traffic by running this command: \
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\cf2 		
+\f1 sudo ufw allow in "Apache Full"
+\f0 \
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 2. \expnd0\expndtw0\kerning0
+install apache2\
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 		
+\f1 \expnd0\expndtw0\kerning0
+sudo apt-get update\
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+sudo apt-get install apache2
+\f0 \
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 3. \expnd0\expndtw0\kerning0
+start apache server\
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 		
+\f1 \expnd0\expndtw0\kerning0
+sudo service apache2 start
+\f0 \
+\pard\tx20\pardeftab720\li565\fi-566\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 4. {\field{\*\fldinst{HYPERLINK "https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean"}}{\fldrslt set up hostname in Digital Ocean}}\
+5. {\field{\*\fldinst{HYPERLINK "https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-16-04"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul set up virtual hosts}}\expnd0\expndtw0\kerning0
+\
+6. {\field{\*\fldinst{HYPERLINK "https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04"}}{\fldrslt set up ssl with LetsEncrypt}}\
+7. (LAMP) {\field{\*\fldinst{HYPERLINK "https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04#step-4-test-php-processing-on-your-web-server"}}{\fldrslt install php and mysql.}} Make sure to enable php: \
+		
+\f1 a2enmod php7.0
+\f0 \
+\
+MEAN Stack\
+1. install node, nom \
+2. install {\field{\*\fldinst{HYPERLINK "https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04"}}{\fldrslt mongodb}} (
+\f1 sudo reboot
+\f0  at the end, then 
+\f1 sudo systemctl start mongodb
+\f0 ) \
+3. }

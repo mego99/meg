@@ -1,0 +1,39 @@
+By far the hardest thing about getting this website up was configuration. I only bought one domain on Digital Ocean, and I needed to host both an API (that communicates with my MySQL database) and the React app that serves the website itself. Considering I was equipped with a pretty poor understanding of how ports worked, this took me ages to figure out. 
+
+Here’s my successful nginx config file in all its glory: 
+
+	upstream api {
+		    server 127.0.0.1:8080;
+	}
+	
+	server {
+		    listen 80;
+		    listen [::]:80;
+	
+		    ssl_dhparam /etc/ssl/certs/dhparam.pem;
+	
+		    root /var/www/meguna.co/build;
+		    index index.html index.htm;
+	
+		    server_name meguna.co www.meguna.co;
+	
+		    location / {
+		            root /var/www/meguna.co/build;
+		            try_files $uri $uri/ /index.html;
+		    }
+	
+		    location /api {
+		            rewrite ^api/(.*)$ /api/$1 break;
+		            proxy_set_header Host $http_host;
+		            proxy_set_header X-Real-IP $remote_addr;
+		            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		            proxy_set_header X-Forwarded-Proto https;
+		            proxy_set_header X-NginX-Proxy true;
+		            proxy_set_header X-Ssl on;
+	
+		            proxy_pass http://api;
+		            proxy_redirect    off;
+		    }
+			  (certbot stuff here)
+	}		                                        
+
