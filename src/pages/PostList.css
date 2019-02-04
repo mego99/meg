@@ -16,14 +16,14 @@
   padding:0;
 }
 .post-date {
-  color: #7480c1;
+  color: #5364C1;
   white-space: nowrap;
   text-transform: uppercase;
   margin:0;
   padding:0;
 }
 .content a.tag {
-  color: #9aa6f9;
+  color: #8F9BE8;
 }
 .post-tags {
   display: flex;
@@ -34,8 +34,9 @@
   margin-left: 0;
   margin-top:0;
   padding:0.3em;
-  background-color: #2a39a1;
+  background-color: #F2F4FF;
   font-size: 0.8em;
+  border-radius: 1px;
 }
 .post-thumb {
   width:20vw;
