@@ -55,7 +55,7 @@ class App extends Component {
             </Switch>
           </main>
           <footer>
-            <p>Copyright &copy; 2018 Meguna</p>
+            <p>Copyright &copy; 2019 Meguna</p>
           </footer>
         </div>
     );
