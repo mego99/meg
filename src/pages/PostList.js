@@ -10,7 +10,7 @@ class PostList extends React.Component {
     this.state = {
       posts: [],
       postlistorigin: '',
-      fetchstatus: true
+      fetchstatus: false
     };
     this.parseTags = this.parseTags.bind(this);
   }
@@ -26,7 +26,7 @@ class PostList extends React.Component {
         return response.json();
       }) //resolve promise by linking to next .then
       .then(parsedData => {
-        this.setState({posts: parsedData});
+        this.setState({posts: parsedData, fetchstatus: true});
       })
 
   }
