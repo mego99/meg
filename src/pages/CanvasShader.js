@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import './CanvasShader.css';
-import Canvas from './Canvas.js';
-
-
 
 class CanvasShader extends Component {
   constructor(props) {
