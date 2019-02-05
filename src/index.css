@@ -60,19 +60,12 @@ a {
   overflow: auto;
 }
 
-h1.header-title {
+.header-title {
   font-family: 'Cerebri Sans', sans-serif;
   font-weight: bold italic;
   font-size: 4em;
   margin: 0 2vw 0 2vw;
-}
-mark {
-  display: inline-block;
-  line-height: 0em;
-  padding-right: 0.2em;
-  padding-bottom: 0.4em;
-  background-color:#3D57FF;
-  word-wrap: break-word;
+  color: #20ABFF;
 }
 
 header {
@@ -99,7 +92,7 @@ ul.nav-ul {
   padding: 0;
 }
 .active {
-  color: #3D57FF;
+  color: #FF0000;
 }
 h1 {
   font-size: 4em;
@@ -122,4 +115,7 @@ footer p {
   margin: 0;
   padding: 2.5vh;
   font-size: 0.5em;
+}
+.title-active > h1{
+  color:black;
 }

@@ -29,10 +29,8 @@ class App extends Component {
     return (
         <div>
           <header className="app-header">
-            <NavLink exact to="/">
-              <h1 className="header-title">
-                <mark className="title">Meguna's Work</mark>
-              </h1>
+            <NavLink exact to="/" activeClassName="title-active">
+              <h1 className="header-title">Meguna's Work</h1>
             </NavLink>
             <ul className="nav-ul">
               <li className="nav-li"><NavLink exact to="/">Home</NavLink></li>
