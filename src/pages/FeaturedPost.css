@@ -1,0 +1,37 @@
+.featured-post-container {
+	background-color: white;
+	padding:30px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+.featured-tagline {
+	margin: 0;
+	text-transform: uppercase;
+}
+.featured-title {
+	font-family: 'Cerebri Sans', sans-serif;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3em;
+	margin: 0;
+	color: black;
+}
+.featured-slug {
+	margin: 0;
+	display: inline-block;
+}
+a.featured-link {
+	border-radius: 5px;
+	background-color: #72A9FF;
+	color: white;
+	padding:20px;
+	margin: 10px 10px 10px 0;
+	display: table;
+}
+.featured-read-more {
+	padding: 10px;
+}
+.featured-link-container {
+	display: flex;
+	flex-direction: row;
+}
