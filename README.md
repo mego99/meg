@@ -13,17 +13,18 @@ This is the repository for my website, which can be found here: [meguna.co](http
 ### To do list
 
 * add redux state manager?
- * root store (state) only contains postlist
+    * root store (state) only contains postlist
 * PostList component
- * infinite scroll (load x more posts when...)
- * 
+    * infinite scroll (load x more posts when...)
+    * 
 * index page
- * 2 featured posts
- * canvas-style animation 
+    * 2 featured posts
+    * canvas-style animation 
 * styles
- * color consolidation
- * page titles
- * updated favicons
+    * color consolidation
+    * page titles
+    * updated favicons
 * lazy loading images
 * syntax highlighting for code snippets
 * husky & prettier 
+* css styling for other browsers & screens
