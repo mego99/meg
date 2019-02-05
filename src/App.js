@@ -16,6 +16,7 @@ import PostList from './pages/PostList';
 import TagRouter from './pages/TagRouter';
 import ArtPostList from './pages/ArtPostList'; 
 import CanvasShader from './pages/CanvasShader'; 
+import FeaturedPost from './pages/FeaturedPost';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class App extends Component {
           <header className="app-header">
             <NavLink exact to="/">
               <h1 className="header-title">
-                <mark class="title">Meguna's Work</mark>
+                <mark className="title">Meguna's Work</mark>
               </h1>
             </NavLink>
             <ul className="nav-ul">
