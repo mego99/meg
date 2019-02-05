@@ -14,7 +14,8 @@ import NewPost from './pages/NewPost';
 import Playground from './pages/Playground';
 import PostList from './pages/PostList';
 import TagRouter from './pages/TagRouter';
-import ArtPostList from './pages/ArtPostList';
+import ArtPostList from './pages/ArtPostList'; 
+import CanvasShader from './pages/CanvasShader'; 
 
 class App extends Component {
   constructor(props) {
@@ -27,7 +28,11 @@ class App extends Component {
     return (
         <div>
           <header className="app-header">
-            <h1 className="header-title"><mark>Meguna's Work</mark></h1>
+            <NavLink exact to="/">
+              <h1 className="header-title">
+                <mark class="title">Meguna's Work</mark>
+              </h1>
+            </NavLink>
             <ul className="nav-ul">
               <li className="nav-li"><NavLink exact to="/">Home</NavLink></li>
               <li className="nav-li"><NavLink to="/about">About</NavLink></li>

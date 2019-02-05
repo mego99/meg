@@ -9,3 +9,6 @@
   width:100vw;
   max-width:100%;
 }
+mark.title {
+	background-color: transparent;
+}

@@ -72,6 +72,7 @@ mark {
   padding-right: 0.2em;
   padding-bottom: 0.4em;
   background-color:#3D57FF;
+  word-wrap: break-word;
 }
 
 header {
@@ -92,8 +93,7 @@ header.app-header {
 li.nav-li {
   display: inline-block;
   padding: 0 2vw 0 2vw;
-  font-size: 0.8em;
-
+  font-size: 1em;
 }
 ul.nav-ul {
   padding: 0;

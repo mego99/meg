@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CanvasShader from './CanvasShader.js';
 import './Home.css';
 
 class Home extends React.Component {
@@ -15,7 +16,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-
+        <CanvasShader />
       </div>
     );
   }
