@@ -1,0 +1,16 @@
+/*body {
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #6EEEFF;
+}*/
+canvas {
+	overflow: hidden;
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	z-index: -100;
+	background: #7CCBFF;
+	bottom: 0;
+}
