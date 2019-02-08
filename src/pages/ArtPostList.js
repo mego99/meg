@@ -1,8 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import './ArtPostList.css';
-import About from './About';
-import TagRouter from './TagRouter.js';
 
 class ArtPostList extends React.Component {
   constructor(props) {
@@ -27,12 +25,6 @@ class ArtPostList extends React.Component {
   }
 
   adjustDate(date) {
-    let monthNames = [
-      "January", "February", "March",
-      "April", "May", "June", "July",
-      "August", "September", "October",
-      "November", "December"
-    ];
     let t = date.split(/[- :TZ]/);
     let d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
     let dateOptions = { month:'long', year:'numeric', timeZone:'Asia/Tokyo' };
@@ -50,8 +42,6 @@ class ArtPostList extends React.Component {
   getPosts() {
     let posts = this.state.posts;
     let date = this.adjustDate;
-    let parseTags = this.parseTags;
-    let getImage = this.getImage;
 
     let newarr =  Object.keys(posts).map(function(x,i) {
 
@@ -61,7 +51,7 @@ class ArtPostList extends React.Component {
                     <h3>{posts[x].title}</h3>
                   </div>
                   <Link to={`/allposts/${posts[x].id}`}>
-                    {<img src={`/api/static/post-images/${posts[x].image_link}`} className="art-post-thumb"/>}
+                    {<img src={`/api/static/post-images/${posts[x].image_link}`} alt="" className="art-post-thumb"/>}
                   </Link>
               </div>;
     })

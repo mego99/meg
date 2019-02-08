@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import CanvasShader from './CanvasShader.js';
 import FeaturedPost from './FeaturedPost.js';
 import './Home.css';

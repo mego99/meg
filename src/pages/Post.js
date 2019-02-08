@@ -1,13 +1,10 @@
-import React, { Component } from "react";
-import {Switch,Route} from "react-router-dom";
+import React from "react";
 import marked from 'marked';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/rainbow.css';
 import './Post.css';
 
-let te = require('text-encoding');
-
-class Post extends Component {
+class Post extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,8 +38,6 @@ class Post extends Component {
     let posts = this.state.posts;
     let newarr =  Object.keys(posts).map(function(x,i) {
       try {
-        let abab = getMarkdownText(posts[x].content);
-        let str = "### Part One: Designing the Project";
         return <div key={i}>
                   <h1>{posts[x].title}</h1>
                   <div dangerouslySetInnerHTML={ getMarkdownText(posts[x].content) } />
@@ -50,7 +45,7 @@ class Post extends Component {
       }
       catch(e) {
         return <div key={i}><p>Coming Soon!</p></div>
-      };
+      }
     })
     return newarr;
   }
@@ -69,7 +64,7 @@ class Post extends Component {
       smartLists: true,
       smartypants: true,
       highlight: function (code) {
-        return require('highlight.js').highlightAuto(code).value;
+        return hljs.highlightAuto(code).value;
       }
     });
 
@@ -78,7 +73,7 @@ class Post extends Component {
           var http = new XMLHttpRequest();
           http.open('HEAD', image_url, true);
           http.send();
-          return http.status != 404;
+          return http.status !== 404;
       }
       let img = '';
       imageExists('/api/static/post-images/' + href) ? img = `${href}` : img = 'def.png'

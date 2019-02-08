@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import React, { Component } from "react";
 import "./index.css";
 import {Route,NavLink,Switch} from "react-router-dom";
@@ -14,9 +14,7 @@ import NewPost from './pages/NewPost';
 import Playground from './pages/Playground';
 import PostList from './pages/PostList';
 import TagRouter from './pages/TagRouter';
-import ArtPostList from './pages/ArtPostList'; 
-import CanvasShader from './pages/CanvasShader'; 
-import FeaturedPost from './pages/FeaturedPost';
+import ArtPostList from './pages/ArtPostList';
 
 class App extends Component {
   constructor(props) {

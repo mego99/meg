@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './About.css';
 
 class About extends React.Component {
@@ -13,6 +13,7 @@ class About extends React.Component {
         'currently working on':'becoming more familiar with React',
         'hobbies':'drawing, programming, eating pastries',
         'currently obsessed with':'creating 3D graphics with Cinema 4D',
+        'fluent languages':'English and Japanese',
         'github':'https://github.com/mego99',
         'dribbble':'https://dribbble.com/megrivers'
       }
@@ -34,7 +35,7 @@ class About extends React.Component {
       <div className="content">
         <h2>About</h2>
         <p>Hi! I’m Meguna and this is where I showcase and (casually) comment on some of my work so far.
-          For an official CV or any general inquiries, please contact: <a href='mailto:megrivers99@gmail.com'>megrivers99@gmail.com</a>.</p>
+          For any general inquiries, please contact: <a href='mailto:megrivers99@gmail.com'>megrivers99@gmail.com</a>.</p>
 
         <div className='data-table'>
           {this.createTable()}

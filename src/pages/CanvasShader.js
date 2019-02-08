@@ -21,9 +21,7 @@ class CanvasShader extends Component {
 
   componentDidMount() {
     const canvas = this.canvasRef.current;
-    const context = canvas.getContext("2d");
     let dpr = window.devicePixelRatio || 1;
-    let rect = canvas.getBoundingClientRect();
     let width = window.innerWidth * dpr;
     let height = ((window.innerHeight * 0.6) * dpr) * 0.6;
     this.setState({width: width, height: height});
@@ -43,7 +41,7 @@ class CanvasShader extends Component {
   }
 
   drawSquares() {
-    let {sqLen, sqPad, sidePad, decay, delay, minNumSqs, maxNumSqs } = 
+    let {sqLen, sqPad, minNumSqs, maxNumSqs} = 
         this.state;
     const canvas = this.canvasRef.current;
 
@@ -85,7 +83,6 @@ class CanvasShader extends Component {
   loop() {
     const canvas = this.canvasRef.current;
     if (canvas) {
-      const ctx = canvas.getContext("2d");
       let delay = this.state.delay;
       let decay = this.state.decay;
 

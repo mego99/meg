@@ -10,7 +10,7 @@ My main goal with this project was to create a space where I could showcase, doc
 
 * **front end:** React
 
-I had already experimented with Angular enough to know that I wasn’t a big fan. To me React was. 
+I narrowed my decision down to either React and Angular for the frontend since I wanted to get the practice of using a popular and in-demand framework. I ended up choosing React because I personally found it to be more intuitive and I preferred JSX over Typescript. 
 
 * **back end:** Node + Express.js
 
@@ -22,16 +22,19 @@ As mentioned previously, I didn’t have too many demands for the database. I ch
 
 * **tools:** of course, I used Git for basic version control and Travis for deployment. 
 
-## Design
-
-I initially designed this website to have three components: “Work”, “Art”, and “
 
 ## Setting it Up
 
 I initially [had some difficulty]() setting up my Nginx server blocks to host both my backend REST API and the frontend of the website itself. 
 
-## Routes
+## Structure
+
 
 
 ## Problems
 
+
+
+## Design
+
+In terms of the content, I 
