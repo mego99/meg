@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Switch,Route} from "react-router-dom";
 import marked from 'marked';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/vs2015.css';
+import 'highlight.js/styles/rainbow.css';
 import './Post.css';
 
 let te = require('text-encoding');
@@ -39,11 +39,8 @@ class Post extends Component {
   getPosts() {
     let getMarkdownText = this.getMarkdownText;
     let posts = this.state.posts;
-    console.log(posts);
-    console.log(posts[0]);
     let newarr =  Object.keys(posts).map(function(x,i) {
       try {
-        console.log(posts[x].content);
         let abab = getMarkdownText(posts[x].content);
         let str = "### Part One: Designing the Project";
         return <div key={i}>
@@ -52,7 +49,6 @@ class Post extends Component {
                </div>;
       }
       catch(e) {
-        console.log(e);
         return <div key={i}><p>Coming Soon!</p></div>
       };
     })
@@ -80,7 +76,7 @@ class Post extends Component {
     renderer.image = function (href, title, text) {
       function imageExists(image_url){
           var http = new XMLHttpRequest();
-          http.open('HEAD', image_url, false);
+          http.open('HEAD', image_url, true);
           http.send();
           return http.status != 404;
       }
@@ -92,13 +88,12 @@ class Post extends Component {
     };
 
     let rawMarkup = marked(md, {sanitize: true});
-    console.log(rawMarkup);
     return { __html: rawMarkup };
   }
 
   render() {
     return (
-      <div>
+      <div className="content post-detail-page-content">
           <div>{this.getPosts()}</div>
       </div>
     );

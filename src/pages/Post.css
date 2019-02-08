@@ -13,3 +13,33 @@
   padding:5vh;
   width:60vw;
 }
+pre {
+	background-color: #E8F1EE;
+	border-radius: 5px;
+}
+code {
+	font-size: 1.5em;
+}
+
+h2 {
+	text-align: left;
+	font-size: 2em;
+	padding-top:1.5em;
+}
+
+
+li {
+	text-align: left;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 1.5em 0 0 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}

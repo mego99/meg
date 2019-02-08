@@ -10,7 +10,6 @@ class Code extends React.Component {
   render() {
     return (
       <div>
-        <h1>Code</h1>
           <PostList postlistorigin='/api/getcodeposts'></PostList>
       </div>
     );

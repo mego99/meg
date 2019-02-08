@@ -6,11 +6,11 @@ class CanvasShader extends Component {
     super(props);
     this.canvasRef = React.createRef();
     this.state = {
-      sqLen: 30,
+      sqLen: 20,
       sqPad: 5,
       sidePad: 2.5,
-      decay: 100,
-      delay: 100,
+      decay: 300,
+      delay: 150,
       minNumSqs: 10,
       maxNumSqs: 30
     };
@@ -19,20 +19,13 @@ class CanvasShader extends Component {
     this.del = this.del.bind(this);
   }
 
-  saveContext(ctx) {
-    this.ctx = ctx;
-    this.width = this.ctx.canvas.width;
-    this.height = this.ctx.canvas.height;
-  }
-
   componentDidMount() {
-  
     const canvas = this.canvasRef.current;
     const context = canvas.getContext("2d");
     let dpr = window.devicePixelRatio || 1;
     let rect = canvas.getBoundingClientRect();
-    let width = window.innerHeight * dpr;
-    let height = window.innerWidth * dpr;
+    let width = window.innerWidth * dpr;
+    let height = ((window.innerHeight * 0.6) * dpr) * 0.6;
     this.setState({width: width, height: height});
 
     canvas.width = width;
@@ -66,7 +59,14 @@ class CanvasShader extends Component {
                  * totalLen;
       let opBase = Math.random() + 0.5;
       let color = "";
-      Math.random() > 0.5 ? color = "#6FDBFF" : color = "#72A9FF";
+      let randOp = Math.random();
+      if (randOp < 0.2)
+        color = "#BEFF5C";
+      else if (randOp < 0.4)
+        color = "#8CFFD7";
+      else
+        color = "#5EEAD1";
+
 
       for (let i = 0; i < numSqs; i++) {
         let opacity = opBase - (0.10 * i);
@@ -100,7 +100,6 @@ class CanvasShader extends Component {
         }
         rAF = window.requestAnimationFrame(loop);
       }, delay);
-
       this.rAF = rAF;
     }
   }

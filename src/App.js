@@ -27,10 +27,10 @@ class App extends Component {
   }
   render() {
     return (
-        <div>
+        <div className="app-container">
           <header className="app-header">
             <NavLink exact to="/" activeClassName="title-active">
-              <h1 className="header-title">Meguna's Work</h1>
+              <h1 className="header-title">Meguna's Playground</h1>
             </NavLink>
             <ul className="nav-ul">
               <li className="nav-li"><NavLink exact to="/">Home</NavLink></li>
@@ -41,7 +41,7 @@ class App extends Component {
               <li className="nav-li"><NavLink to="/code">Code</NavLink></li>
             </ul>
           </header>
-          <main className="content">
+          <main>
             <Switch>
               <Route exact path="/about" component={About}/>
               <Route exact path="/work" component={Work}/>

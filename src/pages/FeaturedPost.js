@@ -23,7 +23,6 @@ class FeaturedPost extends React.Component {
         return response.json();
       }) //resolve promise by linking to next .then
       .then(parsedData => {
-        console.log(parsedData);
         this.setState({post: parsedData, fetchstatus: true});
       })
 
@@ -37,25 +36,25 @@ class FeaturedPost extends React.Component {
     let post = this.state.post[0];
     return <div className="featured-post-container">
             <p className="featured-tagline">{this.props.tagLine}</p>
-            <Link exact to={`/allposts/${this.props.postId}`}>
+            <Link to={`/allposts/${this.props.postId}`}>
               <h2 className="featured-title">{post.title}</h2>
             </Link>
-            <span>
-              <p className="featured-slug">{post.slug}</p>
+            
+            <p className="featured-slug">{post.slug}
+              <span>
                 <Link className="featured-read-more"
-                exact to={`/allposts/${this.props.postId}`}>
+                to={`/allposts/${this.props.postId}`}>
                   read more
                 </Link> 
-            </span>
+              </span>
+            </p>
             <Link className="featured-link featured-expansive-link" 
-                  exact to={this.props.catLink}>{this.props.catLabel}</Link>
+                  to={this.props.catLink}>{this.props.catLabel}</Link>
             
            </div>
   }
 
-
   render() {
-    console.log(this.state);
     if (this.state.fetchstatus) {
       return (
         <div>

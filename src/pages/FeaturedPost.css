@@ -2,7 +2,9 @@
 	background-color: white;
 	padding:30px;
 	border-radius: 5px;
-	margin-bottom: 50px;
+	margin: 30px;
+	height: 100%;
+	width:25vw;
 }
 .featured-tagline {
 	margin: 0;
@@ -12,7 +14,7 @@
 	font-family: 'Cerebri Sans', sans-serif;
 	font-weight: bold;
 	text-align: left;
-	font-size: 3em;
+	font-size: 2em;
 	margin: 0;
 	color: black;
 }
@@ -22,15 +24,26 @@
 }
 a.featured-link {
 	border-radius: 5px;
-	background-color: #72A9FF;
+	background-color: #3DC5C9;
 	color: white;
 	padding:20px;
 	margin: 10px 10px 0 0;
 	display: table;
 }
+a.featured-link:hover {
+	background-color: #43DADF;
+	transition: 0.5s;
+}
+
 .featured-read-more {
 	padding: 10px;
+	white-space: nowrap;
 }
+.featured-read-more:hover {
+	color: #43DADF;
+	transition: 0.5s;
+}
+
 .featured-link-container {
 	display: flex;
 	flex-direction: row;

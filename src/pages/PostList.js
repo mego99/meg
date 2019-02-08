@@ -65,7 +65,7 @@ class PostList extends React.Component {
     let newarr =  Object.keys(posts).map(function(x,i) {
 
       return  <div key={i} className={"post-container " +i}>
-                <div class="post-thumb-container">
+                <div className="post-thumb-container">
                   {<img src={`/api/static/post-images/${posts[x].image_link}`} className="post-thumb"/>}
                 </div>
                 <div className="post-infobox">
@@ -82,13 +82,13 @@ class PostList extends React.Component {
   render() {
     if (this.state.fetchstatus) {
       return (
-        <div>
+        <div className="content">
             <div>{this.getPosts()}</div>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className="content">
           <p>We seem to be having connectivity issues. Sorry!</p>
         </div>
       )

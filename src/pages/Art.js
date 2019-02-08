@@ -10,7 +10,6 @@ class Art extends React.Component {
   render() {
     return (
       <div>
-        <h1>Art</h1>
           <ArtPostList postlistorigin='/api/getartposts'></ArtPostList>
       </div>
     );

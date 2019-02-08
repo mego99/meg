@@ -1,20 +1,34 @@
 @font-face{
   font-family: 'Atlas Grotesk';
-  src: url('assets/fonts/AtlasGrotesk-Thin.woff');
-  font-weight: normal;
+  src: url('assets/fonts/AtlasGrotesk-Light.woff') format('woff');
+  font-weight: 100;
 }
 @font-face{
   font-family: 'Atlas Grotesk';
-  src: url('assets/fonts/Atlas Grotesk Web-Bold.woff');
-  font-weight: bold;
+  src: url('assets/fonts/Atlas Grotesk Web-Regular.woff') format('woff');
+  font-weight: 200;
+}
+@font-face{
+  font-family: 'Atlas Grotesk';
+  src: url('assets/fonts/Atlas Grotesk Web-Bold.woff') format('woff');
+  font-weight: 300;
 }
 @font-face{
   font-family: 'Cerebri Sans';
-  src: url('assets/fonts/CerebriSans-HeavyItalic.woff');
-  font-weight: bold italic;
+  src: url('assets/fonts/CerebriSans-HeavyItalic.woff') format('woff');
+  font-weight: 500;
+}
+@font-face{
+  font-family: 'Cerebri Sans';
+  src: url('assets/fonts/CerebriSans-ExtraBold.woff') format('woff');
+  font-weight: 400;
 }
 html {
   overflow-y: scroll;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
 }
 div#root {
   top:0;
@@ -26,10 +40,11 @@ body {
   margin: 0;
   top:0;
   font-family: 'Atlas Grotesk', sans-serif;
+  font-weight: 100;
   color: #1a1a1a;
 }
 p {
-  font-size:1.2em;
+  font-size:1.5em;
 }
 body.page-background {
   bottom:0;
@@ -42,12 +57,15 @@ body.page-background {
   margin: 0 20vw 0 20vw;
   padding-bottom:3em;
 }
+main {
+  padding-bottom:3em;
+}
 a {
   text-decoration: none;
   color:#000000;
 }
 .content a {
-  color:#3D57FF;
+  color:#3DC5C9;
 }
 .content p,li {
   line-height: 1.5em;
@@ -62,10 +80,10 @@ a {
 
 .header-title {
   font-family: 'Cerebri Sans', sans-serif;
-  font-weight: bold italic;
+  font-weight: 500;
   font-size: 4em;
   margin: 0 2vw 0 2vw;
-  color: #20ABFF;
+  color: #50CFB6;
 }
 
 header {
@@ -92,10 +110,13 @@ ul.nav-ul {
   padding: 0;
 }
 .active {
-  color: #FF0000;
+  color: #50CFB6;
 }
 h1 {
-  font-size: 4em;
+  font-size: 3em;
+  font-family: 'Cerebri Sans', sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 h2 {
   text-align: center;

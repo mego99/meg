@@ -9,7 +9,7 @@ class Work extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <h1>Recent Work</h1>
           <PostList postlistorigin='/api/getnewposts'></PostList>
       </div>

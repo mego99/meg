@@ -31,7 +31,7 @@ class About extends React.Component {
 
 
     return (
-      <div>
+      <div className="content">
         <h2>About</h2>
         <p>Hi! I’m Meguna and this is where I showcase and (casually) comment on some of my work so far.
           For an official CV or any general inquiries, please contact: <a href='mailto:megrivers99@gmail.com'>megrivers99@gmail.com</a>.</p>
