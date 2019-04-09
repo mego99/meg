@@ -1,6 +1,6 @@
 import React from "react";
-import CanvasShader from './CanvasShader.js';
-import FeaturedPost from './FeaturedPost.js';
+import CanvasShader from './CanvasShader';
+import FeaturedPost from './FeaturedPost';
 import './Home.css';
 import './FeaturedPost.css'
 
