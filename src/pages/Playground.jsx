@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class Playground extends React.Component {
   render() {
@@ -12,4 +12,4 @@ class Playground extends React.Component {
   }
 }
 
-export default Playground
+export default Playground;

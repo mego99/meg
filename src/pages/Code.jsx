@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './PostList.css';
 import PostList from './PostList';
 
@@ -10,7 +10,7 @@ class Code extends React.Component {
   render() {
     return (
       <div>
-          <PostList postlistorigin='/api/getcodeposts'></PostList>
+        <PostList postlistorigin="/api/getcodeposts" />
       </div>
     );
   }

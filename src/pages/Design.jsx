@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './PostList.css';
 import PostList from './PostList';
 
@@ -11,7 +11,7 @@ class Design extends React.Component {
     return (
       <div>
         <h1>Design</h1>
-          <PostList postlistorigin='/api/getdesignposts'></PostList>
+        <PostList postlistorigin="/api/getdesignposts" />
       </div>
     );
   }

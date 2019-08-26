@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import './CanvasShader.css';
 
 class CanvasShader extends Component {
@@ -12,7 +12,7 @@ class CanvasShader extends Component {
       decay: 300,
       delay: 150,
       minNumSqs: 10,
-      maxNumSqs: 30
+      maxNumSqs: 30,
     };
     this.drawSquares = this.drawSquares.bind(this);
     this.loop = this.loop.bind(this);
@@ -21,10 +21,10 @@ class CanvasShader extends Component {
 
   componentDidMount() {
     const canvas = this.canvasRef.current;
-    let dpr = window.devicePixelRatio || 1;
-    let width = window.innerWidth * dpr;
-    let height = ((window.innerHeight * 0.6) * dpr) * 0.6;
-    this.setState({width: width, height: height});
+    const dpr = window.devicePixelRatio || 1;
+    const width = window.innerWidth * dpr;
+    const height = ((window.innerHeight * 0.6) * dpr) * 0.6;
+    this.setState({ width, height });
 
     canvas.width = width;
     canvas.height = height;
@@ -41,56 +41,49 @@ class CanvasShader extends Component {
   }
 
   drawSquares() {
-    let {sqLen, sqPad, minNumSqs, maxNumSqs} = 
-        this.state;
+    const { sqLen, sqPad, minNumSqs, maxNumSqs } = this.state;
     const canvas = this.canvasRef.current;
 
     if (canvas) {
-      const ctx = canvas.getContext("2d");
-      let totalLen = sqLen + sqPad;
+      const ctx = canvas.getContext('2d');
+      const totalLen = sqLen + sqPad;
 
-      let numSqs = Math.floor((Math.random() * minNumSqs) + 
-                            (maxNumSqs - minNumSqs));
-      let xLoc = Math.floor((Math.random() * canvas.width) / totalLen)
+      const numSqs = Math.floor((Math.random() * minNumSqs)
+                            + (maxNumSqs - minNumSqs));
+      const xLoc = Math.floor((Math.random() * canvas.width) / totalLen)
                  * totalLen;
-      let yLoc = Math.floor((Math.random() * canvas.height) / totalLen) 
+      const yLoc = Math.floor((Math.random() * canvas.height) / totalLen)
                  * totalLen;
-      let opBase = Math.random() + 0.5;
-      let color = "";
-      let randOp = Math.random();
-      if (randOp < 0.2)
-        color = "#BEFF5C";
-      else if (randOp < 0.4)
-        color = "#8CFFD7";
-      else
-        color = "#5EEAD1";
+      const opBase = Math.random() + 0.5;
+      let color = '';
+      const randOp = Math.random();
+      if (randOp < 0.2) color = '#BEFF5C';
+      else if (randOp < 0.4) color = '#8CFFD7';
+      else color = '#5EEAD1';
 
 
       for (let i = 0; i < numSqs; i++) {
         let opacity = opBase - (0.10 * i);
-        if (opacity < 0)
-          opacity = 0.01;
-        else if (opacity > 1)
-          opacity = 0;
+        if (opacity < 0) opacity = 0.01;
+        else if (opacity > 1) opacity = 0;
         ctx.globalAlpha = opacity;
         ctx.fillStyle = color;
         ctx.fillRect(xLoc + ((sqPad + sqLen) * i), yLoc, sqLen, sqLen);
       }
     }
-    
   }
 
   loop() {
     const canvas = this.canvasRef.current;
     if (canvas) {
-      let delay = this.state.delay;
-      let decay = this.state.decay;
+      const { delay } = this.state;
+      const { decay } = this.state;
 
-      let del = this.del;
-      let drawSquares = this.drawSquares;
-      let loop = this.loop;
+      const { del } = this;
+      const { drawSquares } = this;
+      const { loop } = this;
       let rAF;
-      window.setTimeout(function() {
+      window.setTimeout(() => {
         rAF = window.requestAnimationFrame(del);
         for (let i = 0; i < decay; i++) {
           window.requestAnimationFrame(drawSquares);
@@ -104,18 +97,17 @@ class CanvasShader extends Component {
   del() {
     const canvas = this.canvasRef.current;
     if (canvas) {
-      const ctx = canvas.getContext("2d");
+      const ctx = canvas.getContext('2d');
       ctx.save();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.restore();
     }
-   
   }
 
   render() {
     return (
       <div className="canvas-container">
-       <canvas ref={this.canvasRef} className="canvy"/> 
+        <canvas ref={this.canvasRef} className="canvy" />
       </div>
     );
   }
@@ -123,4 +115,3 @@ class CanvasShader extends Component {
 
 
 export default CanvasShader;
-

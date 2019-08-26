@@ -1,14 +1,18 @@
 .featured-post-container {
 	background-color: white;
-	padding:30px;
 	border-radius: 5px;
-	margin: 30px;
+	padding-right: 30px;
 	height: 100%;
-	width:25vw;
+	flex-grow: 1;
+	min-width: 25vw;
+}
+.featured-post-container:last-child {
+  padding: 0;
 }
 .featured-tagline {
 	margin: 0;
 	text-transform: uppercase;
+	font-size: 1rem;
 }
 .featured-title {
 	font-family: 'Cerebri Sans', sans-serif;
@@ -17,6 +21,7 @@
 	font-size: 2em;
 	margin: 0;
 	color: black;
+	padding: 0;
 }
 .featured-slug {
 	margin: 0;

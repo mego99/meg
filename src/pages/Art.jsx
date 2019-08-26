@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './PostList.css';
 import ArtPostList from './ArtPostList';
 
@@ -10,7 +10,7 @@ class Art extends React.Component {
   render() {
     return (
       <div>
-          <ArtPostList postlistorigin='/api/getartposts'></ArtPostList>
+        <ArtPostList postlistorigin="/api/getartposts" />
       </div>
     );
   }

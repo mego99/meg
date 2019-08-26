@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './PostList.css';
 import PostList from './PostList';
 
@@ -6,14 +6,15 @@ class Tag extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tag: (this.props.location.pathname).split("/")[2]
-    }
+      tag: (this.props.location.pathname).split('/')[2],
+    };
   }
+
   componentDidMount() {
     console.log(this.props.location.pathname);
-    console.log((this.props.location.pathname).split("/")[2]);
-    console.log(this.state.tag)
-    document.title = 'Meguna | Posts Tagged ' + this.state.tag;
+    console.log((this.props.location.pathname).split('/')[2]);
+    console.log(this.state.tag);
+    document.title = `Meguna | Posts Tagged ${this.state.tag}`;
   }
 
   render() {
@@ -21,7 +22,7 @@ class Tag extends React.Component {
     return (
       <div>
         <h1>{this.state.tag}</h1>
-        <PostList postlistorigin={`/api/gettaggedposts/${this.state.tag}`}></PostList>
+        <PostList postlistorigin={`/api/gettaggedposts/${this.state.tag}`} />
       </div>
     );
   }
