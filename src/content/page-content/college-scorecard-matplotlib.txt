@@ -1,0 +1,38 @@
+*Here’s the [github link](https://github.com/mego99/quarteronestats) for this project!*
+
+So I decided to be super extra with my AP Statistics project and do all sorts of stuff that our teacher did NOT require us to do. The project simply asked us to find a dataset and analyze it, noting down things like correlation coefficient and residuals. I put together a very stats-y report [here](https://mego99.github.io/quarteronestats/) (the print out of which I ended up submitting for the assignment), but I figured it would be cool to write about it here as well. 
+
+For my project I wanted to use my tried-and-true D3, but I ended up choosing a dataset with too many data points to do so (I learned the lesson with my [trade map project](https://meguna.co/allposts/22)). This dataset, the [College Scorecard](https://collegescorecard.ed.gov/data/documentation/) distributed by the US govt, was especially interesting to me as a senior in high school. 
+
+I’ve been wanting to play around with Python for a while—I feel like even a casual proficiency with the language would just make my life better, since I could hand off a lot of repetitive tasks to simple scripts. So consider this my first step towards a life of automation, maybe. 
+
+### The Project
+
+The project consisted of three parts: (1) getting the data and (2) cleaning the data. I’m not sure what exactly I was expecting, but it was quite easy. 
+
+The cleaning bit was mainly working with pandas and matplotlib, which isn’t my focus at the moment so I’ll leave that 
+
+### Getting The Data
+
+\*\*I had a ton of print statements just so I could see progress as I ran the file in Terminal.
+
+
+	url = "https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=XXX&school.operating=1&_sort=2013.earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings:desc&_per_page=1&_page= %s &2013.earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings__range=0..&2013.cost.attendance.academic_year__range=0..&fields=school.name"%(0)
+	print("retrieving data count...")
+	j = json.loads(requests.get(url).text)
+	count = int(math.ceil(j["metadata"]["total"]/100))
+	
+	sc = []
+	for x in range(0,count):
+	    url = "https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=XXX&school.operating=1&_sort=2013.earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings:desc&_per_page=100&_page= %s &2013.earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings__range=0..&2013.cost.attendance.academic_year__range=0..&fields=school.name,2013.earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings,2013.cost.attendance.academic_year,2013.admissions.admission_rate.overall,2013.admissions.sat_scores.average.overall,2013.aid.median_debt.number.overall,2013.student.retention_rate.four_year.full_time,school.ownership"%(x)
+	    print("retrieving data points %s to %s..."%(x*100,(x*100)+100))
+	    j = json.loads(requests.get(url).text)
+	    df = jn(j,"results")
+	    sc.append(df)
+	
+	sc = pd.concat(sc, axis=0)
+	print("reassigning index...")
+	sc.reset_index(inplace=True)
+	sc.to_pickle("data.pkl")
+	print("saved to file!")
+	

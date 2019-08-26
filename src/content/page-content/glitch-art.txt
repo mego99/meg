@@ -1,0 +1,22 @@
+Lately I’ve been experimenting with digital art that involves deliberate “glitches.” Called glitch art or databending, it involves corrupting image files through various methods in order to create serendipitous, artistic variations of the original file. 
+
+The two methods I used were: 
+
+* manually altering files using a hex editor. Replacing strings or characters, cutting and pasting blocks of code.
+* opening the file in an audio editor (I used Audacity) and applying filters to it. 
+
+The results were… interesting. Although they looked a tad bit plain as is, they really helped improve the overall complexity of a composition when I used them as layers in other artwork. 
+
+### Resources
+
+[Glitching with Audio Editors](http://blog.animalswithinanimals.com/2008/09/databending-and-glitch-art-primer-part.html)
+
+[Glitching with Hex Editors](http://paulhertz.net/factory/showcase-2/databending/)
+
+### My Results
+
+Here’s what I came up with, after a little tweaking in Photoshop.
+
+![Glitch Comp 1](glitch-comp-1.jpg)
+
+![Glitch Comp 2](glitch-comp-2.jpg)

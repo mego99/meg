@@ -1,0 +1,36 @@
+# INTRODUCTION
+Armed with an interest in data visualization, I’ve produced a few personal projects that visualize geospatial datasets with the help of D3 and Python. Two of them are introduced here. 
+
+# OVERVIEW
+
+![](trade-map.png)
+
+### Volcanoes Around the World
+
+* *github repo: [https://github.com/mego99/volcanomap](https://github.com/mego99/volcanomap)*
+* *live version: [https://mego99.github.io/volcanomap/](https://mego99.github.io/volcanomap/)*
+* data source: 
+
+![](trade-map.png)
+
+### Mapping Global Trade Flows
+
+* *github repo: [https://github.com/mego99/trade-map](https://github.com/mego99/trade-map)*
+* *live version: [https://mego99.github.io/trade-map/](https://mego99.github.io/trade-map/)*
+* data source: 
+
+
+# COMMENTARY: VOLCANO MAP
+
+## MOTIVATION:
+## STACK:
+## PROCESS:
+## TROUBLESHOOTING:
+
+
+# COMMENTARY: TRADE MAP
+
+## MOTIVATION:
+## STACK:
+## PROCESS:
+## TROUBLESHOOTING:

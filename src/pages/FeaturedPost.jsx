@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './FeaturedPost.css';
 
@@ -7,75 +7,47 @@ class FeaturedPost extends React.Component {
     super(props);
     this.state = {
       post: {},
-      postlistorigin: '',
-      fetchstatus: false,
     };
   }
 
   componentDidMount() {
-    const { badState } = this;
-    fetch(`/api/getposts/${this.props.postId}`)
-      .then((response, error) => {
-        if (response.status !== 200) {
-          badState();
-          return '{}';
-        }
-        return response.json();
-      })
+    const { postId } = this.props;
+    fetch(`/api/getposts/${postId}`)
+      .then(res => res.json())
       .then((parsedData) => {
-        this.setState({ post: parsedData, fetchstatus: true });
+        this.setState({
+          post: parsedData,
+        });
       });
   }
 
-  badState = () => {
-    this.setState({ fetchstatus: false });
-  }
-
   getPost() {
-    const post = this.state.post[0];
+    const { post } = this.state;
+    const { postId, tagLine, catLink, catLabel } = this.props;
     return (
       <div className="featured-post-container">
-        <p className="featured-tagline">{this.props.tagLine}</p>
-        <Link to={`/allposts/${this.props.postId}`}>
+        <p className="featured-tagline">{tagLine}</p>
+        <Link to={`/allposts/${postId}`}>
           <h2 className="featured-title">{post.title}</h2>
         </Link>
-        <p className="featured-slug">
-          {post.slug}
+        <p className="featured-slug">{post.subtitle}
           <span>
-            <Link
-              className="featured-read-more"
-              to={`/allposts/${this.props.postId}`
-              }
-            >
+            <Link className="featured-read-more" to={`/allposts/${postId}`}>
               read more
             </Link>
           </span>
         </p>
-        <Link
-          className="featured-link featured-expansive-link"
-          to={this.props.catLink}
-        >
-          {this.props.catLabel}
-        </Link>
       </div>
     );
   }
 
   render() {
-    if (this.state.fetchstatus) {
-      return (
-        <Fragment>
-          {this.getPost()}
-        </Fragment>
-      );
-    }
     return (
-      <Fragment>
-        <p>We seem to be having connectivity issues. Sorry!</p>
-      </Fragment>
+      <div>
+        <div>{this.getPost()}</div>
+      </div>
     );
   }
 }
 
 export default FeaturedPost;
-// /api/getposts/:id

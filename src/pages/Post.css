@@ -1,3 +1,7 @@
+.post-detail-page-content {
+	width: 60vw;
+}
+
 .image-description {
   font-style: oblique;
   color: #6979af;
@@ -21,13 +25,6 @@ code {
 	font-size: 1.5em;
 }
 
-h2 {
-	text-align: left;
-	font-size: 2em;
-	padding-top:1.5em;
-}
-
-
 li {
 	text-align: left;
 	font-size: 1.5em;
@@ -42,4 +39,60 @@ ul {
 
 p {
 	margin: 0;
+	font-size: 1.3rem;
+}
+
+.post-title {
+	font-family: 'Cerebri Sans', sans-serif;
+	text-align: left;
+	font-size: 5rem;
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+	font-weight: 400;
+	text-transform: none;
+}
+
+.post-subtitle {
+	font-family: 'Cerebri Sans', sans-serif;
+	font-weight: 500;
+	text-align: left;
+	font-size: 2em;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+.post-content-wrapper h4 {
+	font-family: 'Cerebri Sans', sans-serif;
+	font-size: 1.9rem;
+	margin: 50px 0 10px 0;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-transform: none;
+}
+
+.post-content-wrapper ul {
+	font-size: 1rem;
+	font-weight: 100;
+	padding: 0;
+}
+
+.post-content-wrapper li {
+	padding: 0;
+}
+
+.post-content-wrapper p, .post-content-wrapper li {
+	font-size: 1.3rem;
+}
+
+.post-content-wrapper p, .post-content-wrapper > ul > li {
+	margin: 0 3vw;
+}
+
+.post-content-wrapper li > ul {
+	transform: translateX(30px);
+}
+
+.post-content-wrapper p {
+	padding-bottom: 15px;
 }

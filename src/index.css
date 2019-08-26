@@ -23,6 +23,16 @@
   src: url('assets/fonts/CerebriSans-ExtraBold.woff') format('woff');
   font-weight: 400;
 }
+@font-face{
+  font-family: 'Cerebri Sans';
+  src: url('assets/fonts/CerebriSans-Medium.otf') format('otf');
+  font-weight: 300;
+}
+@font-face{
+  font-family: 'Cerebri Sans';
+  src: url('assets/fonts/CerebriSans-MediumItalic.otf') format('otf');
+  font-weight: 200;
+}
 html {
   overflow-y: scroll;
 }
@@ -54,7 +64,7 @@ body.page-background {
   max-width:100%;
 }
 .content {
-  margin: 0 20vw 0 20vw;
+  margin: 0 10vw;
   padding-bottom:3em;
 }
 main {

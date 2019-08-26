@@ -1,0 +1,46 @@
+*View the live project [here](https://foodnotes.meguna.co).*
+
+*View the github repository for this project [here](https://github.com/meguna/foodnotes).*
+
+#### Objective
+
+I started Foodnotes in order to help my mother organize all the recipes that she’s accumulated over the years. As an avid baker and chef, she has written down hundreds of recipes and has revised them over the years. Improved organization afforded by digitization will breathe new life into these recipes.
+
+Additionally, this project was a fantastic opportunity to hone my skills in full stack web development—from project organization to programming techniques to design.
+
+#### Overview of Implemented Features
+* view list of recipes
+* view recipe information
+* add, edit, and delete recipes
+	* group ingredients and label these groups
+	* reorder ingredients
+	* attach images to recipes
+* sort and filter recipes
+* account management
+* dual language
+* mobile-friendly responsive design
+* clean UI
+
+#### Technologies
+
+* backend: Node server (with Express)
+* database: mySQL
+* frontend: React
+
+#### Biggest Challenge
+
+The biggest challenge I encountered was setting up IAM (identity and access management). I had never fully implemented this kind of functionality before and the learning process started with looking up basic terminology like ‘JWT.’ 
+
+I used Auth0 as my identity provider because of both time concerns and the stronger security it would provide compared to a custom solution set up by myself. This decision, although effective in terms of security, definitely made it harder for me to learn the concepts because a lot of my time was taken up by debugging the third-party integration. 
+
+I was ultimately able to implement the features, although I still had a few misgivings about some of the specific ways I used Auth0’s APIs. In the future, I would love to try building my own IAM solution to delve deeper into some of the details. I also hope to take courses in network security next semester to bolster the understanding I developed in this project.
+
+#### Biggest Success
+Throughout the whole project, I tangibly felt that my skills and familiarity with every step of the full-stack development process was improving one way or another. In particular, my usage of React has become much more flexible than before, based on a solid grasp of Redux, component patterns and lifecycle, HOCs, and reconciliation. I had so many mini-successes throughout the project that I believe that if I started this project from scratch right now, I could do it in half the time it took me.
+
+#### Most Interesting Task
+
+Internationalization, which I also had no previous experience with, was easy to implement with the help of i18next. Despite this technological ease, I was surprised at how tedious and complex the process could be—particularly when combined with the task of localization. Since there are cultural differences between the way products are marketed in different locales, I had to rethink some of my i18n strings which had been simple direct translations at that point. 
+
+#### Next Steps
+As I mentioned before, I plan to continue working towards a better understanding of IAM with regard to web applications. In addition, I want to take my React skills further by experimenting with server side rendering and React Hooks. 

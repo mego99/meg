@@ -20,7 +20,7 @@ class Home extends React.Component {
       <div className="home-container">
         <div className="home-about-container">
           <p className="home-about-text">
-          Hi, I'm Meguna! I'm a computer science student at Tufts
+          Hi, I&apos;m Meguna! I&apos;m a computer science student at Tufts
           University.
             {' '}
             <br />
@@ -30,7 +30,7 @@ My primary interest is full stack web
             {' '}
             <br />
             {' '}
-Here you can check out some of the things I've
+Here you can check out some of the things I&apos;ve
           been playing around with recently!
           </p>
           <CanvasShader />
@@ -38,14 +38,14 @@ Here you can check out some of the things I've
         <div className="home-content-wrapper">
           <div className="content home-featured-post-container">
             <FeaturedPost
-              postId="11"
+              postId="about-foodnotes"
               tagLine="featured work"
               catLabel="view all work"
               catLink="/code"
             />
           </div>
           <div className="content home-featured-post-container">
-            <FeaturedPost
+            {/*<FeaturedPost
               postId="12"
               tagLine="behind the scenes"
               catLabel="view all work"
@@ -62,7 +62,7 @@ Here you can check out some of the things I've
               tagLine="3d art"
               catLabel="view all blog posts"
               catLink="/code"
-            />
+            />*/}
           </div>
         </div>
       </div>
