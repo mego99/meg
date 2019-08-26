@@ -1,8 +1,0 @@
-*[github link](https://github.com/mego99/meguna.co/)*
-
-I think I’m finally ready to start a website. I’ve been thinking about it for a while, and how to do it. Would it be a portfolio website? A static website with contact info? A SPA with minimal content? A blog? 
-
-For now, my plan is for this to become a blog of sorts. People (lol who) should be able to look through past projects with code, art, etc. I’m not sure exactly, but I feel like logging my process somehow—in a better way than I have been so far—could come in useful in the future. 
-
-Having worked with Angular before for the Women in Japan website, I naturally drifted to it. It’s definitely a good starting point, and I’m sure I can customize the setup as I go. So far, I’ve got the skeleton down: page components, nav/footer components created, routed properly, etc. Next step will be add content, shape it up a little better.
-

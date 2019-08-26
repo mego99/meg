@@ -1,3 +1,0 @@
-*I’ve retrospectively posted the code on github [here](https://github.com/mego99/ajax-php-countries).*
-
-In an effort to work with some more AJAX apps, I’ve been working on a little PHP program that retrieves country data, an embedded google map centered on their capital, and some additional info. 

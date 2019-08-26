@@ -1,9 +1,0 @@
-I was recently introduced to D3 by a friend, and it’s been one of my coolest discoveries *ever*. I think I really like this stuff.
-
-D3, which stands for data-driven document, is a Javascript library that allows you to create data visualizations of all sorts, especially SVG-based ones. All I’ve been doing so far is following D3 creator Mike Bostock’s tutorials, but I’m absolutely loving it. I think I love maps the most. 
-
-Here are the tutorials I’ve followed so far: 
-
-* [Let’s Make a Bar Chart pt. 3](https://bost.ocks.org/mike/bar/3/)
-* [Let’s Make a Map](https://bost.ocks.org/mike/map/)
-* [Let’s Make a Bubble Map](https://bost.ocks.org/mike/bubble-map/)

@@ -1,8 +1,0 @@
-*Check out the code on Github [here](https://github.com/mego99/volcanomap).*
-
-*See it live on Github Pages [here](https://mego99.github.io/volcanomap/).*
-
-More fun with D3! Today I’ve got a cool new map (I love maps) to share: an overview of the world’s volcanos! All compiled on a Robinson projection and filterable by minimum elevation and volcano type. I think this was my favorite map so far. 
-
-The volcanic data was retrieved from the Smithsonian Institution's [Global Volcanism Program](http://volcano.si.edu/) website. Geographic data was retrieved from [Natural Earth](http://www.naturalearthdata.com/), and tectonic data was retrieved from Hugo Ahlenius's [Tectonic Plates](https://github.com/fraxen/tectonicplates) project.
-

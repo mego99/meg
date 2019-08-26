@@ -1,6 +1,0 @@
-*[Here’s the Github link](https://github.com/mego99/apstats2017)*
-
-I’m back with some more D3 stuff, this time a stacked bar chart. I’m planning to keep adding to the same github project whenever I have to make a chart for AP Stats this year. It’s probably not going to last, but who knows? 
-
-Anyway, here’s the first one. 
-

@@ -1,4 +1,0 @@
-I’ve been trying to think of new projects I can do with (almost) vanilla Javascript, and I think I found it: chrome extensions.
-
-Chrome has a [bunch of APIs](https://developer.chrome.com/extensions/devguide) for devs who want to build extensions within their Chrome Developers platform. They’re clunky, unoptimized, and difficult to use, but they do the job. Honestly, I’m hoping that Chrome updates these APIs sooner or later, but that might require a complete overhaul of the architecture… so who knows. 
-

@@ -27,7 +27,7 @@ class FeaturedPost extends React.Component {
     return (
       <div className="featured-post-container">
         <p className="featured-tagline">{tagLine}</p>
-        <Link to={`/allposts/${postId}`}>
+        <Link to={`/post/${postId}`}>
           <h2 className="featured-title">{post.title}</h2>
         </Link>
         <p className="featured-slug">{post.subtitle}

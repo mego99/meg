@@ -14,7 +14,7 @@ class Post extends React.Component {
 
   componentDidMount() {
     const { match } = this.props;
-    fetch(`/api/getposts/${match.params.id}`)
+    fetch(`/api/getposts/${match.params.slug}`)
       .then(response => response.json())
       .then((parsedData) => {
         this.setState({

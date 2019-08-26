@@ -1,3 +1,0 @@
-I’m pretty disappointed that SMIL and SMIL animations are [losing browser support](https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL), because they’ve been pretty awesome. Oh well, CSS animations will have to do. 
-
-![](smil.gif)
