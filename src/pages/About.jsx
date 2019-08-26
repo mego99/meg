@@ -2,12 +2,13 @@ import React from 'react';
 import './About.css';
 
 class About extends React.Component {
-  createTable() {
+  static createTable() {
     const dataTable = {
       name: 'Meguna',
       hometown: 'Tokyo',
-      occupation: 'freshman at Tufts University',
-      'intended major': 'computer science',
+      'based in': 'Medford, MA',
+      occupation: 'sophomore at Tufts University',
+      major: 'computer science',
       interests: 'web applications, statistics, data visualization',
       'currently working on': 'becoming more familiar with React',
       hobbies: 'drawing, programming, eating pastries',
@@ -23,7 +24,6 @@ class About extends React.Component {
         <span className="right">{dataTable[x]}</span>
       </div>
     ));
-    console.log(output);
     return output;
   }
 
@@ -32,18 +32,15 @@ class About extends React.Component {
       <div className="content">
         <h2>About</h2>
         <p>
-Hi! I’m Meguna and this is where I showcase and (casually) comment on some of my work so far.
+          Hi! I’m Meguna and this is where I showcase and (casually) comment on
+          some of my work so far.
           For any general inquiries, please contact:
           <a href="mailto:megrivers99@gmail.com">megrivers99@gmail.com</a>
-.
         </p>
-
         <div className="data-table">
-          {this.createTable()}
+          {About.createTable()}
         </div>
       </div>
-
-
     );
   }
 }
