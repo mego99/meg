@@ -1,13 +1,17 @@
 .featured-post-container {
 	background-color: white;
-	border-radius: 5px;
-	padding-right: 30px;
 	height: 100%;
+	padding: 0 30px;
 	flex-grow: 1;
-	min-width: 25vw;
+	width: 25vw;
+	min-height: 30vh;
+	box-sizing: border-box;
+	border-right: 1px solid black;
+	text-align: center;
 }
 .featured-post-container:last-child {
-  padding: 0;
+   margin: 0;
+   border: 0;
 }
 .featured-tagline {
 	margin: 0;
@@ -17,7 +21,6 @@
 .featured-title {
 	font-family: 'Cerebri Sans', sans-serif;
 	font-weight: bold;
-	text-align: left;
 	font-size: 2em;
 	margin: 0;
 	color: black;

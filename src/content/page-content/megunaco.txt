@@ -1,0 +1,26 @@
+#### Objective
+
+The purpose of this website is to display some of the work that I’ve been doing so far, using a blog-style post to describe each project. Some of the projects are hosted on subdomains here while others are on Github Pages.
+
+This website has been about two years in the making, slowly put together between coursework and projects and other responsibilities. I am certain it will continue to evolve along with my skills and taste.
+
+#### Implemented Features
+Well, you’re looking at it!
+
+* simple blog posts generated from imported markdown documents
+* customizable image layout on post pages
+* canvas shader on index page
+* clean, intuitive, and cohesive design
+
+#### Gradual Evolution
+When I started the project in 2017, I had barely any experience with writing Javascript-based web applications. I chose to set up my website with Angular 4 and soon enough the first iteration of the website was complete. The code was messy and the design was amateurish.
+
+Later I scrapped what I had so far and started from scratch using React. This version was organized slightly better and drew upon a stronger understanding of coding principles. It still had its shortcomings, namely in that it overcomplicated the goal of displaying my work. Everything was stored meticulously in a database, and there was little flexibility in the presentation of each project. 
+
+In essence, all I was doing was setting up a custom CMS solution. I realized that I wasn’t going to showcase hundreds or even tens of projects, and instead wanted to cherry pick a few here or there and showcase them in the best light possible. I stepped back and refocused on building an app that prioritized easy updates, flexible presentation, and simplicity above all.
+
+The current iteration of the website my attempt at doing that while still reusing a lot of code from my previous iterations due to time constraints. 
+ 
+#### Next Steps
+
+Right now, my focus is on expanding the breadth of my coding projects and trying out new things. In the future I believe these new skills will be incorporated into this website as well, much like how the canvas shader came about from my exploration with data visualization.

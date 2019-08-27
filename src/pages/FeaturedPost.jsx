@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './FeaturedPost.css';
 
@@ -31,11 +31,6 @@ class FeaturedPost extends React.Component {
           <h2 className="featured-title">{post.title}</h2>
         </Link>
         <p className="featured-slug">{post.subtitle}
-          <span>
-            <Link className="featured-read-more" to={`/allposts/${postId}`}>
-              read more
-            </Link>
-          </span>
         </p>
       </div>
     );
@@ -43,9 +38,9 @@ class FeaturedPost extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>{this.getPost()}</div>
-      </div>
+      <Fragment>
+        {this.getPost()}
+      </Fragment>
     );
   }
 }

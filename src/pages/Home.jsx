@@ -40,29 +40,18 @@ Here you can check out some of the things I&apos;ve
             <FeaturedPost
               postId="about-foodnotes"
               tagLine="featured work"
-              catLabel="view all work"
-              catLink="/code"
             />
           </div>
           <div className="content home-featured-post-container">
-            {/*<FeaturedPost
-              postId="12"
-              tagLine="behind the scenes"
-              catLabel="view all work"
-              catLink="/code"
+            <FeaturedPost
+              postId="behind-the-scenes"
             />
             <FeaturedPost
-              postId="20"
-              tagLine="3d art"
-              catLabel="view all blog posts"
-              catLink="/code"
+              postId="d3-maps"
             />
             <FeaturedPost
-              postId="20"
-              tagLine="3d art"
-              catLabel="view all blog posts"
-              catLink="/code"
-            />*/}
+              postId="c4d-art"
+            />
           </div>
         </div>
       </div>
