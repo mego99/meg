@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './FeaturedPost.css';
 
@@ -6,13 +7,17 @@ class FeaturedPost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post: {},
+      post: {
+        title: '',
+        subtitle: '',
+        image_link: '',
+      },
     };
   }
 
   componentDidMount() {
-    const { postId } = this.props;
-    fetch(`/api/getposts/${postId}`)
+    const { slug } = this.props;
+    fetch(`/api/getposts/${slug}`)
       .then(res => res.json())
       .then((parsedData) => {
         this.setState({
@@ -21,29 +26,44 @@ class FeaturedPost extends React.Component {
       });
   }
 
-  getPost() {
+  render() {
     const { post } = this.state;
-    const { postId, tagLine, catLink, catLabel } = this.props;
+    const { slug, tagLine, big } = this.props;
+    const bigClass = big ? 'featured-big' : '';
     return (
-      <div className="featured-post-container">
-        <p className="featured-tagline">{tagLine}</p>
-        <Link to={`/post/${postId}`}>
-          <h2 className="featured-title">{post.title}</h2>
+      <div className={`featured-post-container ${bigClass}`}>
+        <Link to={`/post/${slug}`}>
+          <img
+            className="featured-thumb"
+            src={`http://localhost:3005/static/${post.image_link}_1x.png`}
+            srcSet={`http://localhost:3005/static/${post.image_link}_1x.png 1x,
+              http://localhost:3005/static/${post.image_link}_2x.png 2x`}
+            alt={`${post.title}`}
+          />
         </Link>
-        <p className="featured-slug">
-          {post.subtitle}
-        </p>
+        <div className="featured-info-wrapper">
+          <p className="featured-tagline">{tagLine}</p>
+          <Link to={`/post/${slug}`}>
+            <h2 className="featured-title">{post.title}</h2>
+          </Link>
+          <p className="featured-slug">
+            {post.subtitle}
+          </p>
+        </div>
       </div>
     );
   }
-
-  render() {
-    return (
-      <Fragment>
-        {this.getPost()}
-      </Fragment>
-    );
-  }
 }
+
+FeaturedPost.propTypes = {
+  slug: PropTypes.string.isRequired,
+  tagLine: PropTypes.string,
+  big: PropTypes.bool,
+};
+
+FeaturedPost.defaultProps = {
+  tagLine: '',
+  big: false,
+};
 
 export default FeaturedPost;

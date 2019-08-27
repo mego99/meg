@@ -1,6 +1,5 @@
 .featured-post-container {
 	background-color: white;
-	height: 100%;
 	padding: 0 30px;
 	flex-grow: 1;
 	width: 25vw;
@@ -8,6 +7,13 @@
 	box-sizing: border-box;
 	border-right: 1px solid black;
 	text-align: center;
+}
+.featured-thumb {
+	width: 20vw;
+	height: auto;
+	position: relative;
+	padding-bottom: 30px;
+	cursor: pointer;
 }
 .featured-post-container:last-child {
    margin: 0;
@@ -55,4 +61,23 @@ a.featured-link:hover {
 .featured-link-container {
 	display: flex;
 	flex-direction: row;
+}
+
+.featured-big {
+    display: flex;
+    flex-direction: row;
+}
+
+.featured-big img {
+	width: 30vw;
+	height: 22.5vw;
+}
+
+.featured-big .featured-info-wrapper {
+	padding-left: 50px;
+	text-align: left;
+}
+
+.featured-big .featured-title {
+	font-size: 4rem;
 }
