@@ -1,17 +1,7 @@
 import React from 'react';
 import './C4dPost.css';
 
-class C4dPost extends React.Component {
-  componentDidMount() {
-    document.body.classList.toggle('home-background', true);
-    document.body.classList.toggle('page-background', false);
-  }
-
-  componentWillUnmount() {
-    document.body.classList.toggle('home-background', false);
-    document.body.classList.toggle('page-background', true);
-  }
-
+class C4dPost extends React.PureComponent {
   render() {
     return (
       <div className="c4d-container">

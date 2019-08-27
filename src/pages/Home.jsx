@@ -4,34 +4,17 @@ import FeaturedPost from './FeaturedPost';
 import './Home.css';
 import './FeaturedPost.css';
 
-class Home extends React.Component {
-  componentDidMount() {
-    document.body.classList.toggle('home-background', true);
-    document.body.classList.toggle('page-background', false);
-  }
-
-  componentWillUnmount() {
-    document.body.classList.toggle('home-background', false);
-    document.body.classList.toggle('page-background', true);
-  }
-
+class Home extends React.PureComponent {
   render() {
     return (
       <div className="home-container">
         <div className="home-about-container">
           <p className="home-about-text">
-          Hi, I&apos;m Meguna! I&apos;m a computer science student at Tufts
-          University.
-            {' '}
+            Hi, I&apos;m Meguna! I&apos;m a computer science student at Tufts University.
             <br />
-            {' '}
-My primary interest is full stack web
-          development.
-            {' '}
+            My primary interest is full stack web development.
             <br />
-            {' '}
-Check out some of the things I&apos;ve
-          been playing around with recently!
+            Check out some of the things I&apos;ve been playing around with recently!
           </p>
           <CanvasShader />
         </div>

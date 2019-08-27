@@ -23,7 +23,6 @@ class CanvasShader extends Component {
     const dpr = window.devicePixelRatio || 1;
     const width = window.innerWidth * dpr;
     const height = ((window.innerHeight * 0.6) * dpr) * 0.6;
-    this.setState({ width, height });
 
     canvas.width = width;
     canvas.height = height;
