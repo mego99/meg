@@ -1,44 +1,49 @@
 import React from 'react';
 import './About.css';
 
-class About extends React.Component {
-  static createTable() {
-    const dataTable = {
-      name: 'Meguna',
-      hometown: 'Tokyo',
-      'based in': 'Medford, MA',
-      occupation: 'sophomore at Tufts University',
-      major: 'computer science',
-      interests: 'web applications, statistics, data visualization',
-      'currently working on': 'becoming more familiar with React',
-      hobbies: 'drawing, programming, eating pastries',
-      'currently obsessed with': 'creating 3D graphics with Cinema 4D',
-      'fluent languages': 'English and Japanese',
-      github: 'https://github.com/mego99',
-      dribbble: 'https://dribbble.com/megrivers',
-    };
-
-    const output = Object.keys(dataTable).map((x, i) => (
-      <div key={i} className="data-row">
-        <span className="left">{x}</span>
-        <span className="right">{dataTable[x]}</span>
-      </div>
-    ));
-    return output;
-  }
-
+class About extends React.PureComponent {
   render() {
     return (
-      <div className="content">
-        <h2>About</h2>
-        <p>
-          Hi! I’m Meguna and this is where I showcase and (casually) comment on
-          some of my work so far.
-          For any general inquiries, please contact:
-          <a href="mailto:megrivers99@gmail.com">megrivers99@gmail.com</a>
-        </p>
-        <div className="data-table">
-          {About.createTable()}
+      <div className="content about-wrapper">
+        <div className="about-text-wrapper">
+          <p>
+            Hi! I&apos;m Meguna and this is where I display some of my recent work.
+          </p>
+          <p>
+            I&apos;m currently a sophomore at Tufts University studying computer science.
+            I&apos;m originally from Tokyo, but I&apos;m in Medford, MA most of the time.
+          </p>
+          <p>
+            Contact me by email
+            <a href="mailto:megrivers99@gmail.com"> here</a>
+            .
+          </p>
+        </div>
+        <div className="about-dp-wrapper">
+          <img
+            className="about-dp"
+            src="http://localhost:3005/static/dp_1x.jpg"
+            srcSet="http://localhost:3005/static/dp_1x.jpg 1x,
+              http://localhost:3005/static/dp_2x.jpg 2x"
+            alt="profile"
+          />
+          <h4 className="links-title">Links</h4>
+          <a href="https://github.com/meguna">
+            <img
+              src="http://localhost:3005/static/github.svg"
+              className="about-links-logo"
+              alt="github logo"
+            />
+            Github
+          </a>
+          <a href="https://dribbble.com/megrivers/">
+            <img
+              src="http://localhost:3005/static/dribbble.svg"
+              className="about-links-logo"
+              alt="dribbble logo"
+            />
+            Dribbble
+          </a>
         </div>
       </div>
     );
