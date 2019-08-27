@@ -6,11 +6,11 @@ class CanvasShader extends Component {
     super(props);
     this.canvasRef = React.createRef();
     this.state = {
-      sqLen: 20,
+      sqLen: 30,
       sqPad: 5,
       sidePad: 2.5,
-      decay: 300,
-      delay: 150,
+      decay: 600,
+      delay: 300,
       minNumSqs: 10,
       maxNumSqs: 30,
     };
