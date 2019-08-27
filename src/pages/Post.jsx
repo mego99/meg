@@ -40,7 +40,10 @@ class Post extends React.Component {
           {(post && post.title) && <h1 className="post-title">{ post.title }</h1>}
           {(post && post.subtitle) && <h2 className="post-subtitle">{ post.subtitle }</h2>}
           {(content !== '') && (
-            <div className="post-content-wrapper" dangerouslySetInnerHTML={{ __html: content }} />
+            <div
+              className="post-content-wrapper"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
           )}
         </div>
       </div>

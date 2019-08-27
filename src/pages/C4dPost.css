@@ -1,0 +1,36 @@
+.c4d-image-wrapper:nth-child(2n) {
+	text-align: right;
+	flex-direction: row-reverse;
+}
+.c4d-image-wrapper:nth-child(2n) .c4d-image {
+	margin-left: 50px;
+}
+.c4d-image-wrapper:nth-child(2n+1) {
+	text-align: left;
+	flex-direction: row;
+}
+.c4d-image-wrapper:nth-child(2n+1) .c4d-image {
+	margin-right: 50px;
+}
+.c4d-image-wrapper {
+	margin-bottom: 50px;
+	display: flex;
+}
+.c4d-image {
+	width: 50vw;
+}
+.c4d-img-info {
+	display: flex;
+	flex-direction: column;
+}
+.c4d-info-title {
+	font-family: 'Cerebri Sans', sans-serif;
+	font-size: 2.3rem;
+	font-weight: 300;
+	margin: 0;
+}
+.c4d-info-desc {
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-size: 1rem;
+}

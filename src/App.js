@@ -4,6 +4,7 @@ import { Route, NavLink, Switch, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Post from './pages/Post';
+import C4dPost from './pages/C4dPost';
 
 class App extends PureComponent {
   render() {
@@ -21,9 +22,14 @@ class App extends PureComponent {
           <main>
             <Switch>
               <Route exact path="/about" component={About} />
-              <Route exact path="/post/:slug" component={Post} />
+              <Route path="/post/:slug" component={Post} />
+              <Route exact path="/post/c4d-art" component={C4dPost} />
               <Route path="/" component={Home} />
             </Switch>
+            {/* post-specific components */}
+            <div className="content special-sidebar">
+              <Route exact path="/post/c4d-art" component={C4dPost} />
+            </div>
           </main>
           <footer>
             <p>Copyright &copy; 2019 Meguna</p>

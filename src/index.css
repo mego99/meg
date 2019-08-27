@@ -148,3 +148,7 @@ footer p {
 .title-active > h1{
   color:black;
 }
+.special-sidebar {
+  text-align: right;
+  z-index: -10;
+}
