@@ -1,7 +1,7 @@
 canvas {
 	overflow: hidden;
 	width: 100vw;
-	height: 40vh;
+	height: auto;
 	z-index: -100;
 	background: #4CE2C4;
 	position: relative;

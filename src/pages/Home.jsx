@@ -30,7 +30,7 @@ My primary interest is full stack web
             {' '}
             <br />
             {' '}
-Here you can check out some of the things I&apos;ve
+Check out some of the things I&apos;ve
           been playing around with recently!
           </p>
           <CanvasShader />

@@ -8,7 +8,6 @@ class CanvasShader extends Component {
     this.state = {
       sqLen: 30,
       sqPad: 5,
-      sidePad: 2.5,
       decay: 600,
       delay: 300,
       minNumSqs: 10,
@@ -32,12 +31,12 @@ class CanvasShader extends Component {
     this.rAF = window.requestAnimationFrame(this.loop);
   }
 
-  componentWillUnmount() {
-    window.cancelAnimationFrame(this.rAF);
+  shouldComponentUpdate() {
+    return false;
   }
 
-  shouldComponentUpate() {
-    return false;
+  componentWillUnmount() {
+    window.cancelAnimationFrame(this.rAF);
   }
 
   drawSquares() {
@@ -48,19 +47,18 @@ class CanvasShader extends Component {
       const ctx = canvas.getContext('2d');
       const totalLen = sqLen + sqPad;
 
-      const numSqs = Math.floor((Math.random() * minNumSqs)
-                            + (maxNumSqs - minNumSqs));
-      const xLoc = Math.floor((Math.random() * canvas.width) / totalLen)
-                 * totalLen;
-      const yLoc = Math.floor((Math.random() * canvas.height) / totalLen)
-                 * totalLen;
+      /* generate random int between minNumSqs and maxNumSqs */
+      const numSqs = Math.floor((Math.random() * (maxNumSqs - minNumSqs)) + minNumSqs);
+
+      const xLoc = Math.floor((Math.random() * canvas.width) / totalLen) * totalLen;
+      const yLoc = Math.floor((Math.random() * canvas.height) / totalLen) * totalLen;
+
       const opBase = Math.random() + 0.5;
       let color = '';
       const randOp = Math.random();
       if (randOp < 0.2) color = '#BEFF5C';
       else if (randOp < 0.4) color = '#8CFFD7';
       else color = '#5EEAD1';
-
 
       for (let i = 0; i < numSqs; i++) {
         let opacity = opBase - (0.10 * i);

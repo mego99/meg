@@ -11,11 +11,10 @@ class App extends PureComponent {
       <BrowserRouter>
         <div className="app-container">
           <header className="app-header">
-            <NavLink exact to="/" activeClassName="title-active">
+            <NavLink exact to="/">
               <h1 className="header-title">Meguna&apos;s Playground</h1>
             </NavLink>
             <ul className="nav-ul">
-              <li className="nav-li"><NavLink exact to="/">Home</NavLink></li>
               <li className="nav-li"><NavLink to="/about">About</NavLink></li>
             </ul>
           </header>

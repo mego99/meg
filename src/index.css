@@ -134,10 +134,10 @@ h2 {
 footer {
   margin: auto;
   text-align: center;
-  position: relative;
+  position: absolute;
   width:100vw;
   max-width: 100%;
-  top: 30vh;
+  bottom: 0;
   height:3em;
 }
 footer p {

@@ -3,7 +3,6 @@
   text-align: center;
   font-weight: 200;
   width:100vw;
-  height: 40vh;
   overflow: hidden;
   position: relative;
 }
@@ -20,13 +19,17 @@
   margin: 0;
   z-index: 100;
   transform: translate(0, -50%);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.5em;
   color: black;
   width: 100vw;
 }
 .home-container {
   height: 100vh;
+  display: flex;
+  width:100%;
+  height:100%;
+  flex-direction: column;
 }
 .home-content-wrapper {
   z-index: 1;
