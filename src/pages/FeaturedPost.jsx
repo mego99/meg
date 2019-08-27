@@ -30,7 +30,8 @@ class FeaturedPost extends React.Component {
         <Link to={`/post/${postId}`}>
           <h2 className="featured-title">{post.title}</h2>
         </Link>
-        <p className="featured-slug">{post.subtitle}
+        <p className="featured-slug">
+          {post.subtitle}
         </p>
       </div>
     );
