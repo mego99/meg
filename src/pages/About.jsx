@@ -20,13 +20,6 @@ class About extends React.PureComponent {
           </p>
         </div>
         <div className="about-dp-wrapper">
-          <img
-            className="about-dp"
-            src="/api/static/dp_1x.jpg"
-            srcSet="/api/static/dp_1x.jpg 1x,
-              /api/static/dp_2x.jpg 2x"
-            alt="profile"
-          />
           <h4 className="links-title">Links</h4>
           <a href="https://github.com/meguna">
             <img
