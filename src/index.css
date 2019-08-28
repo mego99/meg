@@ -152,3 +152,28 @@ footer p {
   text-align: right;
   z-index: -10;
 }
+
+@media (max-width: 812px) {
+  .app-container {
+    width: 100vw;
+  }
+  .app-header {
+    flex-direction: column;
+  }
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .nav-ul {
+    font-size: 0.5rem;
+    margin-top: 20px;
+  }
+  .about-link::after {
+    content: ' this website';
+  }
+  .about-link {
+    text-transform: lowercase;
+    border: 1px solid #50CFB6;
+    padding: 10px;
+    border-radius: 4px;
+  }
+}

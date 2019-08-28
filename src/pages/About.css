@@ -55,3 +55,28 @@ span.right {
   font-weight: 400;
   text-transform: uppercase;
 }
+
+@media (max-width: 812px) {
+    .about-wrapper {
+      flex-direction: column-reverse;
+    }
+    .about-dp-wrapper {
+      border: none;
+      width: 90vw;
+      padding: 0;
+      margin: auto;
+      text-align: center;
+      align-items: center;
+    }
+    .about-dp {
+      width: 30vw;
+      height: 30vw;
+    }
+    .about-text-wrapper {
+      width: 90vw;
+      padding-top: 20px;
+    }
+    .about-text-wrapper p {
+      font-size: 1rem;
+    }
+}

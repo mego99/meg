@@ -17,7 +17,9 @@ class App extends PureComponent {
               <h1 className="header-title">Meguna&apos;s Playground</h1>
             </NavLink>
             <ul className="nav-ul">
-              <li className="nav-li"><NavLink to="/about">About</NavLink></li>
+              <li className="nav-li">
+                <NavLink className="about-link" to="/about">About</NavLink>
+              </li>
             </ul>
           </header>
           <AppErrorBoundary>

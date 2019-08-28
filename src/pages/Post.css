@@ -96,3 +96,23 @@ p {
 .post-content-wrapper p {
 	padding-bottom: 15px;
 }
+
+@media (max-width: 812px) {
+	.post-detail-page-content {
+		width: 90vw;
+	}
+    .post-title {
+    	font-size: 2rem;
+    }
+    .post-subtitle {
+    	font-size: 1rem;
+    	padding-bottom: 20px;
+    }
+    .post-content-wrapper p, .post-content-wrapper li {
+    	font-size: 0.8rem;
+    }
+    .post-content-wrapper h4 {
+    	margin: 15px 0 5px 0;
+    	font-size: 1.2rem;
+    }
+}

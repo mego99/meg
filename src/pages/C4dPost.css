@@ -34,3 +34,25 @@
 	text-transform: uppercase;
 	font-size: 1rem;
 }
+
+@media (max-width: 812px) {
+  .c4d-image-wrapper:nth-child(2n), .c4d-image-wrapper:nth-child(2n+1) {
+  	flex-direction: column;
+  	text-align: left;
+  }
+  .c4d-image-wrapper:nth-child(2n) .c4d-image, .c4d-image-wrapper:nth-child(2n+1) .c4d-image {
+  	width: 100vw;
+  	height: auto;
+  	position: relative;
+  	left: -5vw;
+  	margin: 0;
+  }
+  .c4d-info-title {
+  	padding-top: 10px;
+  	font-size: 1.6rem;
+  }
+  .c4d-info-desc {
+  	font-size: 0.5rem;
+  	padding: 0;
+  }
+}

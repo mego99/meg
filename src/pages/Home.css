@@ -38,3 +38,20 @@
   background-color: white;
   z-index: 1;
 }
+
+
+@media (max-width: 812px) {
+  canvas {
+  }
+  .home-about-text {
+    font-size: 1rem;
+  }
+  .home-about-container {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 200;
+    width:100vw;
+    overflow: hidden;
+    position: relative;
+  }
+}

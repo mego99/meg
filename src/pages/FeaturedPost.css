@@ -82,3 +82,46 @@ a.featured-link:hover {
 	font-size: 4rem;
 	text-align: left;
 }
+
+@media (max-width: 812px) {
+    .content {
+    	margin: 0 5vw;
+    }
+    .featured-post-container {
+    	padding: 0;
+    	flex-direction: column;
+    	width: 90vw;
+    	border: none;
+    	padding-bottom: 50px;
+    }
+    div.home-featured-post-container {
+    	flex-direction: column;
+    	padding: 0;
+    }
+    .featured-thumb, .featured-big img {
+	    width: 100vw;
+	    height: auto;
+	    padding: 0;
+	    position: relative;
+	    left: -5vw;
+    }
+    .featured-info-wrapper, .featured-big .featured-info-wrapper {
+    	padding: 0;
+    }
+    .featured-big .featured-title {
+    	font-size: 3.5rem;
+    }
+    .featured-title {
+    	text-align: left;
+    }
+    .featured-slug {
+    	font-size: 1rem;
+    	text-align: left;
+    	width: 90vw;
+    }
+    .featured-tagline {
+    	font-size: 0.8rem;
+    	padding-top: 10px;
+    	font-weight: 300;
+    }
+}
