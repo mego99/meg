@@ -1,13 +1,13 @@
 {
-  "main.css": "static/css/main.d18749ba.css",
-  "main.css.map": "static/css/main.d18749ba.css.map",
-  "main.js": "static/js/main.50f62933.js",
-  "main.js.map": "static/js/main.50f62933.js.map",
+  "main.css": "static/css/main.d7aff7df.css",
+  "main.css.map": "static/css/main.d7aff7df.css.map",
+  "main.js": "static/js/main.6d094996.js",
+  "main.js.map": "static/js/main.6d094996.js.map",
   "static/media/Atlas Grotesk Web-Bold.woff": "static/media/Atlas Grotesk Web-Bold.b3c759e0.woff",
   "static/media/Atlas Grotesk Web-Regular.woff": "static/media/Atlas Grotesk Web-Regular.0bb4aa38.woff",
   "static/media/AtlasGrotesk-Light.woff": "static/media/AtlasGrotesk-Light.2d401339.woff",
   "static/media/CerebriSans-ExtraBold.woff": "static/media/CerebriSans-ExtraBold.f9f0a7f2.woff",
   "static/media/CerebriSans-HeavyItalic.woff": "static/media/CerebriSans-HeavyItalic.269d0f7f.woff",
-  "static/media/CerebriSans-Medium.otf": "static/media/CerebriSans-Medium.cfa1b60e.otf",
-  "static/media/CerebriSans-MediumItalic.otf": "static/media/CerebriSans-MediumItalic.f1b5f7ea.otf"
+  "static/media/CerebriSans-Medium.woff": "static/media/CerebriSans-Medium.79fba90d.woff",
+  "static/media/CerebriSans-MediumItalic.woff": "static/media/CerebriSans-MediumItalic.c4c7556d.woff"
 }
