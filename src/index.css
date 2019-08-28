@@ -25,12 +25,12 @@
 }
 @font-face{
   font-family: 'Cerebri Sans';
-  src: url('assets/fonts/CerebriSans-Medium.otf') format('otf');
+  src: url('assets/fonts/CerebriSans-Medium.woff') format('woff');
   font-weight: 300;
 }
 @font-face{
   font-family: 'Cerebri Sans';
-  src: url('assets/fonts/CerebriSans-MediumItalic.otf') format('otf');
+  src: url('assets/fonts/CerebriSans-MediumItalic.woff') format('woff');
   font-weight: 200;
 }
 html {
