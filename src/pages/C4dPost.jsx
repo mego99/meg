@@ -8,9 +8,9 @@ class C4dPost extends React.PureComponent {
         <div className="c4d-image-wrapper">
           <img
             className="c4d-image"
-            src="http://localhost:3005/static/space_1x.jpg"
-            srcSet="http://localhost:3005/static/space_1x.jpg 1x,
-              http://localhost:3005/static/space_2x.jpg 2x"
+            src="/api/static/space_1x.jpg"
+            srcSet="/api/static/space_1x.jpg 1x,
+              /api/static/space_2x.jpg 2x"
             alt="c4d"
           />
           <div className="c4d-img-info">
@@ -21,9 +21,9 @@ class C4dPost extends React.PureComponent {
         <div className="c4d-image-wrapper">
           <img
             className="c4d-image"
-            src="http://localhost:3005/static/grave_1x.jpg"
-            srcSet="http://localhost:3005/static/grave_1x.jpg 1x,
-              http://localhost:3005/static/grave_2x.jpg 2x"
+            src="/api/static/grave_1x.jpg"
+            srcSet="/api/static/grave_1x.jpg 1x,
+              /api/static/grave_2x.jpg 2x"
             alt="c4d"
           />
           <div className="c4d-img-info">
@@ -34,9 +34,9 @@ class C4dPost extends React.PureComponent {
         <div className="c4d-image-wrapper">
           <img
             className="c4d-image"
-            src="http://localhost:3005/static/play_1x.jpg"
-            srcSet="http://localhost:3005/static/play_1x.jpg 1x,
-              http://localhost:3005/static/play_2x.jpg 2x"
+            src="/api/static/play_1x.jpg"
+            srcSet="/api/static/play_1x.jpg 1x,
+              /api/static/play_2x.jpg 2x"
             alt="c4d"
           />
           <div className="c4d-img-info">
@@ -47,9 +47,9 @@ class C4dPost extends React.PureComponent {
         <div className="c4d-image-wrapper">
           <img
             className="c4d-image"
-            src="http://localhost:3005/static/interlock_1x.jpg"
-            srcSet="http://localhost:3005/static/interlock_1x.jpg 1x,
-              http://localhost:3005/static/interlock_2x.jpg 2x"
+            src="/api/static/interlock_1x.jpg"
+            srcSet="/api/static/interlock_1x.jpg 1x,
+              /api/static/interlock_2x.jpg 2x"
             alt="c4d"
           />
           <div className="c4d-img-info">
@@ -60,9 +60,9 @@ class C4dPost extends React.PureComponent {
         <div className="c4d-image-wrapper">
           <img
             className="c4d-image"
-            src="http://localhost:3005/static/bridge_1x.jpg"
-            srcSet="http://localhost:3005/static/bridge_1x.jpg 1x,
-              http://localhost:3005/static/bridge_2x.jpg 2x"
+            src="/api/static/bridge_1x.jpg"
+            srcSet="/api/static/bridge_1x.jpg 1x,
+              /api/static/bridge_2x.jpg 2x"
             alt="c4d"
           />
           <div className="c4d-img-info">

@@ -33,13 +33,15 @@ class FeaturedPost extends React.Component {
     return (
       <div className={`featured-post-container ${bigClass}`}>
         <Link to={`/post/${slug}`}>
-          <img
-            className="featured-thumb"
-            src={`http://localhost:3005/static/${post.image_link}_1x.png`}
-            srcSet={`http://localhost:3005/static/${post.image_link}_1x.png 1x,
-              http://localhost:3005/static/${post.image_link}_2x.png 2x`}
-            alt={`${post.title}`}
-          />
+          {post.image_link && (
+            <img
+              className="featured-thumb"
+              src={`/api/static/${post.image_link}_1x.png`}
+              srcSet={`/api/static/${post.image_link}_1x.png 1x,
+                /api/static/${post.image_link}_2x.png 2x`}
+              alt={`${post.title}`}
+            />
+          )}
         </Link>
         <div className="featured-info-wrapper">
           <p className="featured-tagline">{tagLine}</p>

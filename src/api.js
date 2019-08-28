@@ -11,9 +11,8 @@ const hljs = require('highlight.js');
 const app = express();
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  socketPath: process.env.MYSQL_SOCKET,
   user: 'root',
-  port: 3306,
   password: process.env.DB_PASS,
   database: 'megunaco',
 });
@@ -44,19 +43,17 @@ app.use(bodyParser.urlencoded({
 
 app.listen(3005, '127.0.0.1', () => {});
 
-app.get('/api/static/:folder/:file', (req, res) => {
+app.get('/api/static/:file', (req, res) => {
   const options = {
-    root: `${__dirname}/assets/`,
+    root: `${__dirname}/assets/postimages/`,
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
       'x-sent': true,
     },
   };
-
   const fileName = req.params.file;
-  const folderName = req.params.folder;
-  res.sendFile(`${folderName}/${fileName}`, options);
+  res.sendFile(`${fileName}`, options);
 });
 
 app.get('/api/pc/:filename', (req, res) => {
@@ -76,4 +73,4 @@ app.get('/api/getposts/:slug', (req, res) => {
   });
 });
 
-app.use('/static', express.static('assets/postimages'));
+// app.use('/api/static', express.static('assets/postimages'));
