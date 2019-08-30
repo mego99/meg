@@ -29,7 +29,7 @@ class About extends React.PureComponent {
             />
             Github
           </a>
-          <a href="https://dribbble.com/megrivers/">
+          <a href="https://dribbble.com/meguna/">
             <img
               src="/api/static/dribbble.svg"
               className="about-links-logo"
