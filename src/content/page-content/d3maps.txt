@@ -1,1 +1,51 @@
-Coming soon!
+### Map 1: Crime in Boston
+
+*View the live project [here](https://meguna.github.io/boston-crime/index.html).*
+
+*View the github repository for this project [here](https://github.com/meguna/boston-crime).*
+
+This is a map that visualizes incidents of crime in the Boston area, from 2015 to now. The purpose of this project was to work with locally sourced data and experiment with Canvas technology. The Crime in Boston dataset has over three hundred thousand data points, so it would be impossible to handle with SVG and quite a task to handle with Canvas. 
+
+#### Implemented Features
+* different datasets for different zoom levels
+* somewhat optimized data visualization of a large dataset
+
+#### Next Steps
+A fun extension of this project would be to allow users to filter through the crime data on the map. Currently, datasets with differing resolutions are loaded for different zoom levels so that the viewing space is not cluttered with all three hundred thousand data points. In the current implementation, these clustered versions of the full dataset are pre-generated in Python and then retrieved from the local directory on the Canvas webpage. To implement filtering functionality, I would probably set up a simple Node server that would return the clustered and filtered datasets on demand.
+
+
+#### Data Sources
+
+Massachusetts shapefile: [Mass GIS](https://docs.digital.mass.gov/dataset/massgis-data-community-boundaries-towns-survey-points)
+
+Boston Neighborhoods shapefile: [Boston GIS](http://bostonopendata-boston.opendata.arcgis.com/datasets/3525b0ee6e6b427f9aab5d0a1d0a1a28_0)
+
+Crime Dataset: [Analyze Boston](https://www.kaggle.com/AnalyzeBoston/crimes-in-boston)
+
+##### References
+
+UCR Handbook: [UCR Handbook](https://ucr.fbi.gov/additional-ucr-publications/ucr_handbook.pdf)
+
+
+### Map 2: Volcanoes around the World
+
+*View the live project [here](https://meguna.github.io/volcanomap/).*
+
+*View the github repository for this project [here](https://github.com/meguna/volcanomap).*
+
+This is a SVG-based map that lets users explore the world’s volcanoes. 
+
+#### Implemented Features
+* filtering volcanoes for elevation
+* toggle outline of tectonic plates to see visual relationship between volcano formation and plate boundaries
+
+#### Next Steps
+The map can definitely benefit from a zoom functionality that lets users take a closer look at volcanoes of a certain region, since right now many closely located volcanoes are overlapping and hard to view. In addition, I believe that the legend, which currently shows how the volcanoes are categorized into different types, could be clearer if there was an interface that provided contextual information about the characteristics of each volcano type.
+
+#### Data Sources
+
+Volcanic data: The Smithsonian Institution's [Global Volcanism Program](http://volcano.si.edu/)
+
+Geographic shapefiles: [Natural Earth](http://www.naturalearthdata.com/)
+
+Tectonic data: Hugo Ahlenius's [Tectonic Plates](https://github.com/fraxen/tectonicplates) project
